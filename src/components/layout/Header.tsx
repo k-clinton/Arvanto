@@ -44,10 +44,10 @@ export function Header() {
         className={`
           fixed z-50
           top-3 left-8 right-8
-          sm:top-[18px] sm:left-20 sm:right-20
-          lg:top-[22px] lg:left-40 lg:right-40
-          xl:left-[220px] xl:right-[220px]
-          rounded-2xl
+          sm:top-[18px] sm:left-24 sm:right-24
+          lg:top-[22px] lg:left-48 lg:right-48
+          xl:left-[260px] xl:right-[260px]
+          rounded-full
           transition-all duration-500 ease-in-out
           ${isScrolled
             ? "bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
