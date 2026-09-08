@@ -63,11 +63,11 @@ export function Header() {
               <Icon icon="ph:trend-up-bold" className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <span
-              className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight uppercase transition-colors duration-500 ${
+              className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight transition-colors duration-500 ${
                 isScrolled ? "text-dark dark:text-white" : "text-white"
               }`}
             >
-              ARVANTO
+              Arvanto
             </span>
           </Link>
 
