@@ -43,10 +43,10 @@ export function Header() {
       <header
         className={`
           fixed z-50
-          top-3 left-4 right-4
-          sm:top-[18px] sm:left-10 sm:right-10
-          lg:top-[22px] lg:left-20 lg:right-20
-          xl:left-28 xl:right-28
+          top-3 left-8 right-8
+          sm:top-[18px] sm:left-20 sm:right-20
+          lg:top-[22px] lg:left-40 lg:right-40
+          xl:left-[220px] xl:right-[220px]
           rounded-2xl
           transition-all duration-500 ease-in-out
           ${isScrolled
