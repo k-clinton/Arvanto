@@ -22,14 +22,14 @@ export function HeroSection() {
        * mix-blend-screen makes black = transparent, so the building
        * floats seamlessly on the blue sky gradient — no hard edges.
        */}
-      <div className="absolute top-0 right-0 w-full md:w-[68%] h-[90%] md:h-full z-10 pointer-events-none flex items-end md:items-center justify-end">
+      <div className="absolute top-0 right-0 w-full md:w-[52%] h-[75%] md:h-[85%] z-10 pointer-events-none flex items-end md:items-center justify-end">
         <div className="relative w-full h-full">
           <Image
             src="/images/heroBanner.png"
             alt="Modern architectural building – Arvanto"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 68vw"
+            sizes="(max-width: 768px) 100vw, 52vw"
             className="object-contain object-right-bottom md:object-right mix-blend-screen"
           />
           {/* Subtle bottom fade into the stats card */}
