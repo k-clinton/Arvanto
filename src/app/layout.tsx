@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: "Arvanto — Strategy. Intelligence. Transformation.",
   description:
     "Global Business Transformation & Value Creation Consultancy combining strategy, artificial intelligence, data analytics, and quantitative intelligence.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/icon.svg",
+  },
   keywords: [
     "Arvanto",
     "Business Transformation",
