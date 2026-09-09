@@ -13,7 +13,7 @@ export function ArvantoLogoMark({
   ...props
 }: ArvantoLogoMarkProps) {
   let fillColor = "currentColor";
-  if (variant === "dark") fillColor = "#0F172A";
+  if (variant === "dark") fillColor = "#1E293B";
   if (variant === "white") fillColor = "#FFFFFF";
   if (variant === "primary") fillColor = "#0284C7";
 
@@ -21,7 +21,7 @@ export function ArvantoLogoMark({
     <svg
       width={size}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 36 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -29,16 +29,12 @@ export function ArvantoLogoMark({
       role="img"
       {...props}
     >
-      {/* 
-        Concept #8: Stacked Building Architectural Mark
-        3 horizontally stacked geometric building layers:
-        - Top layer (Apex): x=10, y=4, w=12, h=6
-        - Middle layer (Core): x=6, y=13, w=20, h=6
-        - Bottom layer (Foundation): x=2, y=22, w=28, h=6
-      */}
-      <rect x="10" y="4" width="12" height="6" rx="1.5" fill={fillColor} />
-      <rect x="6" y="13" width="20" height="6" rx="1.5" fill={fillColor} />
-      <rect x="2" y="22" width="28" height="6" rx="1.5" fill={fillColor} />
+      {/* Top Layer */}
+      <path d="M4 13.5 L18 5 L32 13.5 V17.5 L18 9 L4 17.5 Z" fill={fillColor} />
+      {/* Middle Layer */}
+      <path d="M4 19.5 L18 11 L32 19.5 V23.5 L18 15 L4 23.5 Z" fill={fillColor} />
+      {/* Bottom Layer with Flat Base */}
+      <path d="M4 25.5 L18 17 L32 25.5 V31 H4 Z" fill={fillColor} />
     </svg>
   );
 }
