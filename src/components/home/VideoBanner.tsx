@@ -23,7 +23,7 @@ export function VideoBanner() {
         <div className="relative rounded-t-2xl overflow-hidden">
           <video
             ref={videoRef}
-            className="w-full absolute inset-0 object-cover z-0 h-full brightness-50"
+            className="w-full absolute inset-0 object-cover z-0 h-full"
             autoPlay
             loop
             muted
@@ -33,9 +33,9 @@ export function VideoBanner() {
           >
             <source src="/videos/banner.mp4" type="video/mp4" />
           </video>
-          <div className="relative z-10 bg-black/50 lg:py-48 md:py-28 py-16">
+          <div className="relative z-10 lg:py-48 md:py-28 py-16">
             <div className="flex flex-col items-center gap-8">
-              <h2 className="text-white lg:text-52 md:text-40 text-3xl max-w-3/4 text-center font-medium leading-tight">
+              <h2 className="text-white lg:text-52 md:text-40 text-3xl max-w-3/4 text-center font-medium leading-tight drop-shadow-md">
                 Enter a realm where bold strategy and artificial intelligence unite.
               </h2>
               <Link
