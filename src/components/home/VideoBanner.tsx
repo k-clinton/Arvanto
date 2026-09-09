@@ -10,6 +10,7 @@ export function VideoBanner() {
     if (videoRef.current) {
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
+      videoRef.current.load();
       videoRef.current.play().catch((error) => {
         console.error("Autoplay was prevented by browser:", error);
       });
@@ -27,13 +28,10 @@ export function VideoBanner() {
             loop
             muted
             playsInline
+            preload="auto"
             aria-label="Background video showing digital transformation"
           >
             <source src="/videos/banner.mp4" type="video/mp4" />
-            <source
-              src="https://videos.pexels.com/video-files/7233782/7233782-hd_1920_1080_25fps.mp4"
-              type="video/mp4"
-            />
           </video>
           <div className="relative z-10 bg-black/50 lg:py-48 md:py-28 py-16">
             <div className="flex flex-col items-center gap-8">
