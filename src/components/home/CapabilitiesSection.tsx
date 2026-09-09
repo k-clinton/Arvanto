@@ -23,7 +23,7 @@ export function CapabilitiesSection() {
               Transforming businesses with integrated capabilities.
             </h2>
             <p className="text-dark/50 dark:text-white/50 text-lg lg:max-w-full leading-[1.3] md:max-w-3/4">
-              From high-yield corporate strategy and autonomous AI engines to balance-sheet stress testing and operating model transformation.
+              From high-yield corporate strategy and autonomous AI engines to balance sheet stress testing and operating model transformation.
             </p>
             <Link
               className="py-4 px-8 bg-primary text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark duration-300 transition"
