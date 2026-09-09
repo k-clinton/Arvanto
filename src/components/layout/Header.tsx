@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { ArvantoLogoMark } from "@/components/common/ArvantoLogoMark";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,10 +59,12 @@ export function Header() {
         <nav className="flex items-center justify-between h-[68px] sm:h-[76px] lg:h-[82px] px-4 sm:px-6 lg:px-8">
 
           {/* ── Left: Logo + Brand Name ────────────────────────────── */}
-          <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <div className="bg-primary text-white p-2 sm:p-2.5 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-sm">
-              <Icon icon="ph:trend-up-bold" className="w-4 h-4 sm:w-5 sm:h-5" />
-            </div>
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Arvanto Home">
+            <ArvantoLogoMark
+              variant={isScrolled ? "dark" : "white"}
+              size={30}
+              className="w-7 h-7 sm:w-8 sm:h-8 transition-colors duration-500 flex-shrink-0 group-hover:scale-105 transform dark:text-white"
+            />
             <span
               className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight transition-colors duration-500 ${
                 isScrolled ? "text-dark dark:text-white" : "text-white"
