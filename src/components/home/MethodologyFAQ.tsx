@@ -35,7 +35,7 @@ export function MethodologyFAQ() {
                   Discover → Diagnose → Quantify → Transform → Scale
                 </h3>
                 <p className="text-white/80 text-sm mt-2">
-                  A disciplined 5-stage framework engineered to turn complex systemic challenges into measurable financial results.
+                  A disciplined 5 stage framework engineered to turn complex systemic challenges into measurable financial results.
                 </p>
               </div>
             </div>
