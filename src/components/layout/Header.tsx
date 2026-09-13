@@ -33,14 +33,6 @@ export function Header() {
 
   return (
     <>
-      {/*
-       * FLOATING NAVBAR
-       * ─────────────────────────────────────────────────────────────
-       * Fixed position, inset ~22px from top, ~30px from left/right.
-       * At top of page : transparent bg, white text.
-       * After scrolling: white bg, dark text, subtle shadow.
-       * The outer container keeps its position & rounded shape in both states.
-       */}
       <header
         className={`
           fixed z-50
@@ -58,7 +50,6 @@ export function Header() {
       >
         <nav className="flex items-center justify-between h-[68px] sm:h-[76px] lg:h-[82px] px-4 sm:px-6 lg:px-8">
 
-          {/* ── Left: Logo + Brand Name ────────────────────────────── */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Arvanto Home">
             <ArvantoLogoMark
               variant={isScrolled ? "dark" : "white"}
@@ -74,7 +65,6 @@ export function Header() {
             </span>
           </Link>
 
-          {/* ── Right: Actions ─────────────────────────────────────── */}
           <div className="flex items-center gap-2 sm:gap-3">
 
             {/* Theme Toggle */}
