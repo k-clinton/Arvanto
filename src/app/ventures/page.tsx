@@ -14,7 +14,7 @@ export default function VenturesPage() {
             Venture Building & Strategic Investments
           </h1>
           <p className="text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Building next-generation business units, developing proprietary enterprise technology, and exploring long-term equity positions in promising ventures.
+            Building next generation business units, developing proprietary enterprise technology, and exploring long term equity positions in promising ventures.
           </p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function VenturesPage() {
               </div>
               <h3 className="text-xl font-bold">Strategic Equity & Joint Ventures</h3>
               <p className="text-sm text-dark/70 dark:text-white/70">
-                Structuring equity co-investments and venture partnerships alongside high-growth tech startups and established enterprise spin-offs.
+                Structuring equity co investments and venture partnerships alongside high growth tech startups and established enterprise spin-offs.
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function VenturesPage() {
         <div className="text-center bg-dark/5 dark:bg-white/5 p-12 md:p-16 rounded-3xl border border-dark/10 dark:border-white/10 max-w-3xl mx-auto">
           <h3 className="text-3xl font-bold mb-4">Partner with Arvanto Ventures</h3>
           <p className="text-dark/70 dark:text-white/70 mb-8">
-            Are you exploring strategic technology partnerships, new business spin-offs, or venture investments in East Africa and global markets?
+            Are you exploring strategic technology partnerships, new business spin offs, or venture investments in East Africa and global markets?
           </p>
           <Link
             href="/contactus"
