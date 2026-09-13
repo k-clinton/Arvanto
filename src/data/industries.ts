@@ -56,7 +56,7 @@ export const INDUSTRIES: Industry[] = [
     slug: "energy-infrastructure",
     name: "Energy & Infrastructure",
     tagline: "Utilities, Renewable Energy, Logistics & Heavy Industry",
-    description: "Balancing capital-intensive assets with grid modernizations, operational efficiency, renewable energy transitions, and ESG risk compliance.",
+    description: "Balancing capital intensive assets with grid modernizations, operational efficiency, renewable energy transitions, and ESG risk compliance.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
     focusAreas: [
       "Capital Asset Optimization",
