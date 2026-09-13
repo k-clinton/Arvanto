@@ -22,7 +22,7 @@ export const METHODOLOGY_STEPS: MethodologyStep[] = [
     step: "02",
     title: "Diagnose",
     subtitle: "Identify Problems & Growth Levers",
-    description: "Isolate high-friction operational bottlenecks, structural inefficiencies, capital misallocations, and untapped value creation levers.",
+    description: "Isolate high friction operational bottlenecks, structural inefficiencies, capital misallocations, and untapped value creation levers.",
     keyOutputs: [
       "Root Cause Failure Analysis",
       "Opportunity & Risk Inventory",
@@ -55,10 +55,10 @@ export const METHODOLOGY_STEPS: MethodologyStep[] = [
     step: "05",
     title: "Scale",
     subtitle: "Monitor, Optimize & Expand",
-    description: "Embed continuous feedback loops, real-time KPI dashboards, and governance frameworks to guarantee permanent value retention and scale.",
+    description: "Embed continuous feedback loops, real time KPI dashboards, and governance frameworks to guarantee permanent value retention and scale.",
     keyOutputs: [
-      "Real-time Executive Dashboard",
-      "Post-Implementation Performance Audit",
+      "Real time Executive Dashboard",
+      "Post Implementation Performance Audit",
       "Continuous Optimization Playbook"
     ]
   }
