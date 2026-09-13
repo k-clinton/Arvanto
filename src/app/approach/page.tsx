@@ -15,7 +15,7 @@ export default function ApproachPage() {
             Discover → Diagnose → Quantify → Transform → Scale
           </h1>
           <p className="text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Our disciplined 5-stage transformation framework bridges high-level executive strategy with quantitative proof and automated execution.
+            Our disciplined 5-stage transformation framework bridges high level executive strategy with quantitative proof and automated execution.
           </p>
         </div>
       </div>
