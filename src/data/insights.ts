@@ -19,7 +19,7 @@ export const INSIGHTS: Insight[] = [
     category: "AI & Technology",
     date: "Sep 02, 2026",
     readTime: "6 min read",
-    excerpt: "Moving beyond passive chatbots to deploy decision-making AI agents that execute complex workflow tasks and model strategic outcomes.",
+    excerpt: "Moving beyond passive chatbots to deploy decision making AI agents that execute complex workflow tasks and model strategic outcomes.",
     content: "Enterprise leadership is shifting from manual decision analytics to autonomous intelligence systems. Discover how leading organizations are integrating AI agents directly into supply chains, financial risk models, and customer operations...",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     author: "Arvanto Intelligence Practice"
@@ -44,7 +44,7 @@ export const INSIGHTS: Insight[] = [
     date: "Aug 15, 2026",
     readTime: "5 min read",
     excerpt: "How regional enterprises in Kenya and across Africa are leveraging quantitative risk models to protect balance sheets against FX volatility.",
-    content: "Market volatility across developing economies requires real-time stress testing rather than annual budget reviews. We explore balance sheet resilience strategies tailored for East African enterprise contexts...",
+    content: "Market volatility across developing economies requires real time stress testing rather than annual budget reviews. We explore balance sheet resilience strategies tailored for East African enterprise contexts...",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     author: "Arvanto Risk Practice"
   }
