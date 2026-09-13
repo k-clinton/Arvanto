@@ -1,4 +1,4 @@
-export interface Division {
+[export interface Division {
   name: string;
   tagline: string;
   focus: string;
@@ -11,7 +11,7 @@ export const DIVISIONS: Division[] = [
     name: "Arvanto Advisory",
     tagline: "Strategy & Growth Leadership",
     focus: "Corporate Strategy, Growth & Market Dominance",
-    description: "High-impact strategic advisory for C-suite leaders and boards navigating market disruption, capital allocation, and expansion decisions.",
+    description: "High impact strategic advisory for C-suite leaders and boards navigating market disruption, capital allocation, and expansion decisions.",
     services: [
       "Corporate Strategy",
       "Growth Strategy",
