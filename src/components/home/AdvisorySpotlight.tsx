@@ -46,7 +46,7 @@ export function AdvisorySpotlight() {
             </div>
 
             <p className="text-base text-dark/50 dark:text-white/50 leading-relaxed">
-              Arvanto Advisory embedded alongside leadership to restructure an East African financial conglomerate. By combining high-yield growth strategy, custom AI agent workflows, and quantitative capital stress testing, we unlocked 3.4x ROI and reduced operational friction by 65%.
+              Arvanto Advisory embedded alongside leadership to restructure an East African financial conglomerate. By combining high yield growth strategy, custom AI agent workflows, and quantitative capital stress testing, we unlocked 3.4x ROI and reduced operational friction by 65%.
             </p>
 
             {/* 4 Feature Badges */}
