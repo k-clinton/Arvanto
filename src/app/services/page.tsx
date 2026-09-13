@@ -14,7 +14,7 @@ export default function ServicesPage() {
             Arvanto Capabilities
           </span>
           <h1 className="text-5xl md:text-7xl font-bold mt-4 mb-6 leading-tight">
-            5 Core Practices. End-to-End Execution.
+            5 Core Practices. End to End Execution.
           </h1>
           <p className="text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
             Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, and Operating Transformation.
