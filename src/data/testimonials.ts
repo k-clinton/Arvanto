@@ -10,7 +10,7 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    quote: "Arvanto converted our multi-layered operating challenges into an actionable, quantified roadmap. Their integration of strategic advisory with actual AI deployment was unlike traditional consulting firms.",
+    quote: "Arvanto converted our multi layered operating challenges into an actionable, quantified roadmap. Their integration of strategic advisory with actual AI deployment was unlike traditional consulting firms.",
     author: "David Kariuki",
     role: "Chief Operating Officer",
     organization: "Regional Commercial Bank",
@@ -19,7 +19,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "2",
     quote: "The quantitative rigor Arvanto brought to our capital planning and risk stress-testing gave our board total confidence during market turbulence. They execute with remarkable speed.",
-    author: "Aminat Al-Mansoor",
+    author: "Aminat Al Mansoor",
     role: "Head of Strategy & Growth",
     organization: "East Africa Infrastructure Holdings",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
