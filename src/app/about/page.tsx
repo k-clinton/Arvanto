@@ -27,10 +27,10 @@ export default function AboutPage() {
             <p className="text-primary font-semibold uppercase tracking-wider text-sm">Our Mission</p>
             <h2 className="text-40 font-bold mt-2 mb-6">Combining Strategy, Data & AI for Scalable Value</h2>
             <p className="text-dark/70 dark:text-white/70 text-lg leading-relaxed mb-6">
-              Modern enterprises face multi-dimensional complexity: rapid technological evolution, volatile economic shifts, and data fragmentation. Arvanto bridges these domain silos with integrated multidisciplinary pods.
+              Modern enterprises face multi dimensional complexity: rapid technological evolution, volatile economic shifts, and data fragmentation. Arvanto bridges these domain silos with integrated multidisciplinary pods.
             </p>
             <p className="text-dark/70 dark:text-white/70 text-lg leading-relaxed">
-              We do not stop at recommendations. We deploy autonomous AI agents, restructure operating models, stress-test capital exposure, and maintain a Transformation Office to guarantee execution.
+              We do not stop at recommendations. We deploy autonomous AI agents, restructure operating models, stress test capital exposure, and maintain a Transformation Office to guarantee execution.
             </p>
           </div>
           <div className="relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <Icon icon="ph:globe-hemisphere-east-bold" className="text-primary text-5xl mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Global Footprint Rooted in Africa</h2>
             <p className="text-dark/70 dark:text-white/70 text-lg leading-relaxed mb-8">
-              Founded in Nairobi, Kenya, Arvanto brings internationally credible expertise tailored for high-growth emerging and global markets across Africa, the Middle East, the UK, and beyond.
+              Founded in Nairobi, Kenya, Arvanto brings internationally credible expertise tailored for high growth emerging and global markets across Africa, the Middle East, the UK, and beyond.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center pt-8 border-t border-dark/10 dark:border-white/10">
               <div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h4 className="text-3xl font-bold text-primary">Global</h4>
-                <p className="text-sm text-dark/50 dark:text-white/50">Long-term Vision</p>
+                <p className="text-sm text-dark/50 dark:text-white/50">Long term Vision</p>
               </div>
             </div>
           </div>
