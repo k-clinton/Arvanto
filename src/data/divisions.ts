@@ -1,4 +1,4 @@
-[export interface Division {
+export interface Division {
   name: string;
   tagline: string;
   focus: string;
