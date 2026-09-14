@@ -12,6 +12,13 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  const isHome = pathname === "/";
+  // Navbar background: transparent at top, solid when scrolled — on ALL pages
+  // Text color logic: when unscrolled on home (dark bg) => white text;
+  //                    when unscrolled on non-home (white bg) => dark text;
+  //                    when scrolled (white navbar bg) => dark text always
+  const useDarkContent = isScrolled || !isHome;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -43,7 +50,7 @@ export function Header() {
           rounded-full
           transition-all duration-500 ease-in-out
           ${isScrolled
-            ? "bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
+            ? "bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)] border border-black/5 dark:border-white/10"
             : "bg-transparent shadow-none"
           }
         `}
@@ -52,13 +59,13 @@ export function Header() {
 
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Arvanto Home">
             <ArvantoLogoMark
-              variant={isScrolled ? "dark" : "white"}
+              variant={useDarkContent ? "dark" : "white"}
               size={30}
               className="w-7 h-7 sm:w-8 sm:h-8 transition-colors duration-500 flex-shrink-0 group-hover:scale-105 transform dark:text-white"
             />
             <span
               className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight transition-colors duration-500 ${
-                isScrolled ? "text-dark dark:text-white" : "text-white"
+                useDarkContent ? "text-dark dark:text-white" : "text-white"
               }`}
             >
               Arvanto
@@ -68,13 +75,13 @@ export function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
 
             {/* Theme Toggle */}
-            <ThemeToggle isScrolled={isScrolled} />
+            <ThemeToggle isScrolled={useDarkContent} />
 
             {/* Phone — desktop only */}
             <a
               href="tel:+254700000000"
               className={`hidden xl:flex items-center gap-1.5 text-sm font-medium transition-colors duration-500 ${
-                isScrolled
+                useDarkContent
                   ? "text-dark/70 dark:text-white/70 hover:text-primary"
                   : "text-white/90 hover:text-white"
               }`}
@@ -82,7 +89,7 @@ export function Header() {
               <Icon
                 icon="ph:phone-bold"
                 className={`w-4 h-4 transition-colors duration-500 ${
-                  isScrolled ? "text-primary" : "text-white"
+                  useDarkContent ? "text-primary" : "text-white"
                 }`}
               />
               <span>+254 700 000 000</span>
@@ -91,19 +98,19 @@ export function Header() {
             {/* Divider — desktop only */}
             <div
               className={`hidden xl:block h-5 w-px transition-colors duration-500 ${
-                isScrolled ? "bg-dark/20 dark:bg-white/20" : "bg-white/30"
+                useDarkContent ? "bg-dark/20 dark:bg-white/20" : "bg-white/30"
               }`}
             />
 
             {/*
              * Menu Button
-             * Top state   : white bg + dark text (white pill visible on hero)
-             * Scrolled     : dark bg + white text (dark pill inside white navbar)
+             * Home top state: white bg + dark text
+             * Scrolled / non-Home: dark bg + white text (or white in dark theme)
              */}
             <button
               onClick={() => setIsMenuOpen(true)}
               className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all duration-500 cursor-pointer ${
-                isScrolled
+                useDarkContent
                   ? "bg-dark dark:bg-white border-dark dark:border-white text-white dark:text-dark hover:bg-primary hover:border-primary hover:text-white"
                   : "bg-white border-white text-dark hover:bg-primary hover:border-primary hover:text-white"
               }`}
