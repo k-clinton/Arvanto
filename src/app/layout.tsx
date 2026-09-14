@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MainContent } from "@/components/layout/MainContent";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default function RootLayout({
       <body className="bg-white dark:bg-black text-dark dark:text-white antialiased transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <MainContent>{children}</MainContent>
           <Footer />
         </ThemeProvider>
       </body>
