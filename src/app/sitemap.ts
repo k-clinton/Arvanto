@@ -11,5 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/insights`, lastModified: new Date() },
     { url: `${baseUrl}/ventures`, lastModified: new Date() },
     { url: `${baseUrl}/contactus`, lastModified: new Date() },
+    { url: `${baseUrl}/terms-and-conditions`, lastModified: new Date() },
+    { url: `${baseUrl}/privacy-policy`, lastModified: new Date() },
   ];
 }
