@@ -59,9 +59,11 @@ export function Header() {
 
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Arvanto Home">
             <ArvantoLogoMark
-              variant={useDarkContent ? "dark" : "white"}
+              variant="current"
               size={30}
-              className="w-7 h-7 sm:w-8 sm:h-8 transition-colors duration-500 flex-shrink-0 group-hover:scale-105 transform dark:text-white"
+              className={`w-7 h-7 sm:w-8 sm:h-8 transition-colors duration-500 flex-shrink-0 group-hover:scale-105 transform ${
+                useDarkContent ? "text-dark dark:text-white" : "text-white"
+              }`}
             />
             <span
               className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight transition-colors duration-500 ${

@@ -27,10 +27,10 @@ export function ThemeToggle({ isScrolled }: ThemeToggleProps) {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={`flex items-center justify-center p-2.5 rounded-full border transition-all duration-300 cursor-pointer ${
+      className={`flex items-center justify-center transition-colors duration-300 cursor-pointer ${
         isScrolled
-          ? "border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 text-dark dark:text-white hover:bg-primary hover:text-white hover:border-primary"
-          : "border-white/30 bg-white/15 text-white hover:bg-white hover:text-dark"
+          ? "text-dark dark:text-white hover:text-primary"
+          : "text-white hover:text-white/70"
       }`}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
       title={`Switch to ${isDark ? "light" : "dark"} mode`}
