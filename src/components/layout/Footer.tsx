@@ -39,8 +39,8 @@ export function Footer() {
             <a href="#" className="text-white/60 hover:text-primary transition" aria-label="Twitter">
               <Icon icon="ph:twitter-logo-bold" className="w-6 h-6" />
             </a>
-            <a href="#" className="text-white/60 hover:text-primary transition" aria-label="Github">
-              <Icon icon="ph:github-logo-bold" className="w-6 h-6" />
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-primary transition" aria-label="WhatsApp">
+              <Icon icon="ph:whatsapp-logo-bold" className="w-6 h-6" />
             </a>
           </div>
         </div>
