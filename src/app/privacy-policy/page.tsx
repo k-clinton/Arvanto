@@ -130,7 +130,7 @@ export default function PrivacyPolicyPage() {
               </h2>
             </div>
             <p className="mb-4">
-              Arvanto employs multi-layered defense and governance protocols to safeguard personal and confidential data:
+              Arvanto employs multi layered defense and governance protocols to safeguard personal and confidential data:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4 text-dark/70 dark:text-white/70">
               <li>End-to-end encryption in transit (TLS 1.3) and at rest (AES-256).</li>
