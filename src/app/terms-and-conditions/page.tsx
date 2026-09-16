@@ -64,7 +64,7 @@ export default function TermsAndConditionsPage() {
               </h2>
             </div>
             <p className="mb-4">
-              Arvanto delivers high-level business transformation, corporate strategy, artificial intelligence enablement, data intelligence, quantitative risk modelling, and operational restructuring consulting.
+              Arvanto delivers high level business transformation, corporate strategy, artificial intelligence enablement, data intelligence, quantitative risk modelling, and operational restructuring consulting.
             </p>
             <p className="mb-4">
               Informational materials, articles, research papers, and case studies published on our public platforms are intended solely for general thought-leadership and executive briefing purposes. They do not constitute formal legal, investment, regulatory, or tax advice.
