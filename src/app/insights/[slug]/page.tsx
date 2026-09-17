@@ -17,27 +17,27 @@ export default async function InsightDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="py-16 bg-white dark:bg-black text-dark dark:text-white">
-      <div className="container max-w-4xl mx-auto px-5 2xl:px-0">
+    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
+      <div className="container max-w-4xl mx-auto px-4 sm:px-5 2xl:px-0">
         <Link
           href="/insights"
-          className="inline-flex items-center gap-2 text-sm text-primary font-semibold mb-8 hover:underline"
+          className="inline-flex items-center gap-2 text-sm text-primary font-semibold mb-6 sm:mb-8 hover:underline"
         >
           <Icon icon="ph:arrow-left-bold" />
           <span>Back to Insights</span>
         </Link>
 
-        <div className="space-y-4 mb-8">
-          <span className="text-xs uppercase tracking-widest text-primary font-bold bg-primary/10 px-4 py-1.5 rounded-full">
+        <div className="space-y-4 mb-6 sm:mb-8">
+          <span className="text-xs uppercase tracking-widest text-primary font-bold bg-primary/10 px-4 py-1.5 rounded-full inline-block">
             {article.category}
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-3">{article.title}</h1>
-          <p className="text-dark/50 dark:text-white/50 text-sm">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mt-3">{article.title}</h1>
+          <p className="text-dark/50 dark:text-white/50 text-xs sm:text-sm">
             Published on {article.date} • {article.readTime} • By {article.author}
           </p>
         </div>
 
-        <div className="h-[400px] relative rounded-3xl overflow-hidden mb-12 shadow-2xl">
+        <div className="h-[220px] sm:h-[340px] md:h-[400px] relative rounded-3xl overflow-hidden mb-8 sm:mb-12 shadow-2xl">
           <Image
             src={article.image}
             alt={article.title}
@@ -46,8 +46,8 @@ export default async function InsightDetailPage({ params }: Props) {
           />
         </div>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none text-dark/80 dark:text-white/80 leading-relaxed space-y-6">
-          <p className="text-xl font-medium text-dark dark:text-white leading-relaxed">
+        <div className="prose prose-base sm:prose-lg dark:prose-invert max-w-none text-dark/80 dark:text-white/80 leading-relaxed space-y-4 sm:space-y-6">
+          <p className="text-lg sm:text-xl font-medium text-dark dark:text-white leading-relaxed">
             {article.excerpt}
           </p>
           <p>{article.content}</p>
@@ -56,7 +56,7 @@ export default async function InsightDetailPage({ params }: Props) {
           </p>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-dark/10 dark:border-white/10 flex justify-between items-center">
+        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-dark/10 dark:border-white/10 flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center text-center">
           <Link
             href="/insights"
             className="px-6 py-3 rounded-full bg-dark/5 dark:bg-white/10 font-semibold text-sm hover:bg-primary hover:text-white transition"
