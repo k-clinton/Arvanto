@@ -43,7 +43,7 @@ export function TestimonialsSection() {
                       src={current.image}
                       alt={current.author}
                       fill
-                      className="object-cover"
+                      className={`${current.imageClassName || "object-cover"}`}
                     />
                   </div>
                   <div>
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
                 src={current.image}
                 alt={current.author}
                 fill
-                className="object-cover rounded-2xl"
+                className={`${current.imageClassName || "object-cover"} rounded-2xl`}
               />
             </div>
           </div>
