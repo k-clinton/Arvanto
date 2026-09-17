@@ -9,8 +9,16 @@ export function TestimonialsSection() {
   const [activeIdx, setActiveIdx] = useState(0);
   const current = TESTIMONIALS[activeIdx];
 
+  const handlePrev = () => {
+    setActiveIdx((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIdx((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section className="bg-dark relative overflow-hidden py-24" id="testimonial">
+    <section className="bg-dark relative overflow-hidden py-24 group/section" id="testimonial">
       {/* Background Subtle Overlay */}
       <div className="absolute right-0 top-0 opacity-15 pointer-events-none">
         <Icon icon="ph:quotes-fill" className="w-96 h-96 text-white/10" />
@@ -60,7 +68,7 @@ export function TestimonialsSection() {
                     <button
                       key={i}
                       onClick={() => setActiveIdx(i)}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                      className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                         i === activeIdx ? "w-8 bg-primary" : "w-2.5 bg-white/20 hover:bg-white/40"
                       }`}
                       aria-label={`Go to slide ${i + 1}`}
@@ -82,6 +90,23 @@ export function TestimonialsSection() {
           </div>
         </div>
       </div>
+
+      {/* Edge Navigation Buttons (Fade in on Hover) */}
+      <button
+        onClick={handlePrev}
+        aria-label="Previous testimonial"
+        className="absolute left-3 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 hover:bg-primary text-white/80 hover:text-white backdrop-blur-md border border-white/10 shadow-2xl flex items-center justify-center opacity-0 group-hover/section:opacity-100 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+      >
+        <Icon icon="ph:caret-left-bold" className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9" />
+      </button>
+
+      <button
+        onClick={handleNext}
+        aria-label="Next testimonial"
+        className="absolute right-3 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 hover:bg-primary text-white/80 hover:text-white backdrop-blur-md border border-white/10 shadow-2xl flex items-center justify-center opacity-0 group-hover/section:opacity-100 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+      >
+        <Icon icon="ph:caret-right-bold" className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9" />
+      </button>
     </section>
   );
 }
