@@ -33,13 +33,13 @@ export function VideoBanner() {
           >
             <source src="/videos/banner.mp4" type="video/mp4" />
           </video>
-          <div className="relative z-10 lg:py-48 md:py-28 py-16">
-            <div className="flex flex-col items-center gap-8">
-              <h2 className="text-white lg:text-52 md:text-40 text-3xl max-w-3/4 text-center font-medium leading-tight drop-shadow-md">
+          <div className="relative z-10 lg:py-48 md:py-28 py-12 sm:py-16 px-4">
+            <div className="flex flex-col items-center gap-6 sm:gap-8">
+              <h2 className="text-white lg:text-52 md:text-40 text-2xl sm:text-3xl max-w-full sm:max-w-3/4 text-center font-medium leading-tight drop-shadow-md">
                 Enter a realm where bold strategy and artificial intelligence unite.
               </h2>
               <Link
-                className="bg-white py-4 px-8 rounded-full text-dark hover:bg-primary hover:text-white duration-300 font-semibold transition"
+                className="bg-white py-3.5 sm:py-4 px-7 sm:px-8 rounded-full text-dark hover:bg-primary hover:text-white duration-300 font-semibold transition text-sm sm:text-base text-center"
                 href="/contactus"
               >
                 Discuss Your Challenge
