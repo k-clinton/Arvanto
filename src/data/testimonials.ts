@@ -5,6 +5,7 @@ export interface Testimonial {
   role: string;
   organization: string;
   image: string;
+  imageClassName?: string;
 }
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -14,7 +15,8 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "David Kariuki",
     role: "Chief Operating Officer",
     organization: "Regional Commercial Bank",
-    image: "/images/David Kariuki.jpeg"
+    image: "/images/David Kariuki.jpeg",
+    imageClassName: "object-cover object-top"
   },
   {
     id: "2",
@@ -22,7 +24,8 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Aminat Al Mansoor",
     role: "Head of Strategy & Growth",
     organization: "East Africa Infrastructure Holdings",
-    image: "/images/Aminat AI moonsoor.jpeg"
+    image: "/images/Aminat AI moonsoor.jpeg",
+    imageClassName: "object-cover object-top"
   },
   {
     id: "3",
@@ -30,6 +33,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Samuel Omondi",
     role: "Managing Director",
     organization: "Apex Logistics & Retail",
-    image: "/images/Samuel Omondi.jpeg"
+    image: "/images/Samuel Omondi.jpeg",
+    imageClassName: "object-cover object-center"
   }
 ];
