@@ -14,7 +14,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "David Kariuki",
     role: "Chief Operating Officer",
     organization: "Regional Commercial Bank",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    image: "/images/David Kariuki.jpeg"
   },
   {
     id: "2",
@@ -22,7 +22,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Aminat Al Mansoor",
     role: "Head of Strategy & Growth",
     organization: "East Africa Infrastructure Holdings",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+    image: "/images/Aminat AI moonsoor.jpeg"
   },
   {
     id: "3",
@@ -30,6 +30,6 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Samuel Omondi",
     role: "Managing Director",
     organization: "Apex Logistics & Retail",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+    image: "/images/Samuel Omondi.jpeg"
   }
 ];
