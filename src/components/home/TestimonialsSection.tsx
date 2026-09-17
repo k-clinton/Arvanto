@@ -63,11 +63,14 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Slider Controls */}
-                <div className="flex gap-3 mt-8">
+                <div className="flex gap-3 mt-8 relative z-30">
                   {TESTIMONIALS.map((_, i) => (
                     <button
                       key={i}
-                      onClick={() => setActiveIdx(i)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveIdx(i);
+                      }}
                       className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                         i === activeIdx ? "w-8 bg-primary" : "w-2.5 bg-white/20 hover:bg-white/40"
                       }`}
@@ -91,21 +94,46 @@ export function TestimonialsSection() {
         </div>
       </div>
 
-      {/* Edge Navigation Buttons (Fade in on Hover) */}
+      {/* Left 1/3 Navigation Zone (Appears on hover across the left 1/3) */}
       <button
         onClick={handlePrev}
         aria-label="Previous testimonial"
-        className="absolute left-3 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 hover:bg-primary text-white/80 hover:text-white backdrop-blur-md border border-white/10 shadow-2xl flex items-center justify-center opacity-0 group-hover/section:opacity-100 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        className="group/prev absolute left-0 top-0 bottom-0 w-1/3 flex items-center justify-start pl-4 sm:pl-8 lg:pl-12 z-20 cursor-pointer bg-transparent border-none outline-none"
       >
-        <Icon icon="ph:caret-left-bold" className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9" />
+        <div className="opacity-0 group-hover/prev:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover/prev:translate-x-0 text-white/50 group-hover/prev:text-white hover:!text-primary active:scale-95">
+          <svg
+            className="w-6 h-12 sm:w-8 sm:h-16 lg:w-9 lg:h-20 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            viewBox="0 0 32 80"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M24 12 L8 40 L24 68" />
+          </svg>
+        </div>
       </button>
 
+      {/* Right 1/3 Navigation Zone (Appears on hover across the right 1/3) */}
       <button
         onClick={handleNext}
         aria-label="Next testimonial"
-        className="absolute right-3 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 hover:bg-primary text-white/80 hover:text-white backdrop-blur-md border border-white/10 shadow-2xl flex items-center justify-center opacity-0 group-hover/section:opacity-100 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        className="group/next absolute right-0 top-0 bottom-0 w-1/3 flex items-center justify-end pr-4 sm:pr-8 lg:pr-12 z-20 cursor-pointer bg-transparent border-none outline-none"
       >
-        <Icon icon="ph:caret-right-bold" className="w-6 h-6 sm:w-8 sm:h-8 lg:w-9 lg:h-9" />
+        <div className="opacity-0 group-hover/next:opacity-100 transition-all duration-300 transform translate-x-2 group-hover/next:translate-x-0 text-white/50 group-hover/next:text-white hover:!text-primary active:scale-95">
+          <svg
+            className="w-6 h-12 sm:w-8 sm:h-16 lg:w-9 lg:h-20 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            viewBox="0 0 32 80"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M8 12 L24 40 L8 68" />
+          </svg>
+        </div>
       </button>
     </section>
   );
