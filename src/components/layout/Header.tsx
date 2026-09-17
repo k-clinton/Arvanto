@@ -43,8 +43,9 @@ export function Header() {
       <header
         className={`
           fixed z-50
-          top-3 left-8 right-8
-          sm:top-[18px] sm:left-24 sm:right-24
+          top-2.5 left-3 right-3
+          sm:top-[18px] sm:left-12 sm:right-12
+          md:left-24 md:right-24
           lg:top-[22px] lg:left-48 lg:right-48
           xl:left-[260px] xl:right-[260px]
           rounded-full
@@ -56,7 +57,7 @@ export function Header() {
           }
         `}
       >
-        <nav className="flex items-center justify-between h-[68px] sm:h-[76px] lg:h-[82px] px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between h-[62px] sm:h-[76px] lg:h-[82px] px-3.5 sm:px-6 lg:px-8">
 
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Arvanto Home">
             <ArvantoLogoMark
