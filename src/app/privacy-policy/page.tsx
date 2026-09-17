@@ -12,17 +12,17 @@ export default function PrivacyPolicyPage() {
   const lastUpdated = "September 15, 2026";
 
   return (
-    <div className="py-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Hero Banner */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 mb-16">
-        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-12 md:p-20 text-center md:text-left relative overflow-hidden">
+      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 mb-12 sm:mb-16">
+        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left relative overflow-hidden">
           <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
             Privacy & Trust
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-4 mb-4 leading-tight">
             Privacy Policy
           </h1>
-          <p className="text-base md:text-lg text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
             Arvanto is committed to safeguarding the privacy, confidentiality, and integrity of corporate data and personal information entrusted to us.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/80 bg-black/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
@@ -33,10 +33,10 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Content Container */}
-      <div className="container max-w-5xl mx-auto px-5 2xl:px-0 py-8">
-        <div className="space-y-12 text-dark/80 dark:text-white/80 leading-relaxed">
+      <div className="container max-w-5xl mx-auto px-4 sm:px-5 2xl:px-0 py-4 sm:py-8">
+        <div className="space-y-8 sm:space-y-12 text-dark/80 dark:text-white/80 leading-relaxed">
           {/* Section 1 */}
-          <section className="p-8 md:p-10 rounded-3xl border border-dark/10 dark:border-white/10 bg-dark/[0.02] dark:bg-white/[0.02]">
+          <section className="p-6 sm:p-8 md:p-10 rounded-3xl border border-dark/10 dark:border-white/10 bg-dark/[0.02] dark:bg-white/[0.02]">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">
                 01
