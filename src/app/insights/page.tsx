@@ -5,29 +5,29 @@ import { INSIGHTS } from "@/data/insights";
 
 export default function InsightsPage() {
   return (
-    <div className="py-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Banner */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 mb-16">
-        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-12 md:p-20 text-center md:text-left">
+      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 mb-12 sm:mb-16">
+        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left">
           <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
             Arvanto Research & Briefings
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold mt-4 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-4 mb-4 sm:mb-6 leading-tight">
             Insights & Thought Leadership
           </h1>
-          <p className="text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
+          <p className="text-base md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
             Executive perspectives on corporate strategy, artificial intelligence implementation, quantitative risk management, and operating model redesign.
           </p>
         </div>
       </div>
 
       {/* Grid of Insights */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 py-4 sm:py-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {INSIGHTS.map((blog) => (
             <div key={blog.id} className="w-full">
               <Link className="gap-4 group block" href={`/insights/${blog.slug}`}>
-                <div className="overflow-hidden rounded-2xl flex-shrink-0 h-[260px] relative mb-4">
+                <div className="overflow-hidden rounded-2xl flex-shrink-0 h-[200px] sm:h-[260px] relative mb-4">
                   <Image
                     src={blog.image}
                     alt={blog.title}
