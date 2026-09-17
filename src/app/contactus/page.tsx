@@ -12,35 +12,35 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="py-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Banner */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 mb-16">
-        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-12 md:p-20 text-center md:text-left">
+      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 mb-12 sm:mb-16">
+        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left">
           <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
             Contact Arvanto
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold mt-4 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-4 mb-4 sm:mb-6 leading-tight">
             Start a Conversation.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
+          <p className="text-base md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
             Discuss your enterprise challenge, schedule an executive briefing, or explore strategic advisory partnerships with Arvanto.
           </p>
         </div>
       </div>
 
       {/* Main Grid */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-8">
-        <div className="grid lg:grid-cols-12 gap-12">
+      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 py-4 sm:py-8">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12">
           {/* Left Column Info */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
             <div>
-              <p className="text-primary font-semibold uppercase tracking-wider text-sm">
+              <p className="text-primary font-semibold uppercase tracking-wider text-xs sm:text-sm">
                 Get In Touch
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">
                 Let&apos;s build an intelligent, resilient business.
               </h2>
-              <p className="text-dark/70 dark:text-white/70 text-base leading-relaxed">
+              <p className="text-dark/70 dark:text-white/70 text-sm sm:text-base leading-relaxed">
                 Whether you need corporate strategy, custom AI agents, quantitative risk models, or full operating transformation, our team is ready.
               </p>
             </div>
@@ -88,14 +88,14 @@ export default function ContactUsPage() {
           </div>
 
           {/* Right Column Form */}
-          <div className="lg:col-span-7 bg-dark/5 dark:bg-white/5 p-8 md:p-12 rounded-3xl border border-dark/10 dark:border-white/10">
+          <div className="lg:col-span-7 bg-dark/5 dark:bg-white/5 p-6 sm:p-8 md:p-12 rounded-3xl border border-dark/10 dark:border-white/10">
             {submitted ? (
-              <div className="text-center py-16 space-y-4">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto text-3xl">
+              <div className="text-center py-12 sm:py-16 space-y-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto text-2xl sm:text-3xl">
                   <Icon icon="ph:check-bold" />
                 </div>
-                <h3 className="text-3xl font-bold">Thank You!</h3>
-                <p className="text-dark/70 dark:text-white/70 max-w-md mx-auto">
+                <h3 className="text-2xl sm:text-3xl font-bold">Thank You!</h3>
+                <p className="text-dark/70 dark:text-white/70 max-w-md mx-auto text-sm sm:text-base">
                   Your message has been transmitted to Arvanto&apos;s executive advisory team. We will review your inquiry and follow up within 24 hours.
                 </p>
                 <button
@@ -106,10 +106,10 @@ export default function ContactUsPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <h3 className="text-2xl font-bold mb-4">Enterprise Inquiry Form</h3>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">Enterprise Inquiry Form</h3>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-xs uppercase font-bold text-dark/70 dark:text-white/70 mb-2">
                       Full Name *
@@ -118,7 +118,7 @@ export default function ContactUsPage() {
                       required
                       type="text"
                       placeholder="e.g. David Kariuki"
-                      className="w-full px-5 py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
+                      className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
                     />
                   </div>
                   <div>
@@ -129,12 +129,12 @@ export default function ContactUsPage() {
                       required
                       type="email"
                       placeholder="e.g. david@company.com"
-                      className="w-full px-5 py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
+                      className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-xs uppercase font-bold text-dark/70 dark:text-white/70 mb-2">
                       Organization / Company
@@ -142,14 +142,14 @@ export default function ContactUsPage() {
                     <input
                       type="text"
                       placeholder="e.g. Regional Financial Group"
-                      className="w-full px-5 py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
+                      className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
                     />
                   </div>
                   <div>
                     <label className="block text-xs uppercase font-bold text-dark/70 dark:text-white/70 mb-2">
                       Area of Interest
                     </label>
-                    <select className="w-full px-5 py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm">
+                    <select className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm">
                       <option>Strategy & Growth</option>
                       <option>AI & Technology</option>
                       <option>Data & Decision Intelligence</option>
@@ -168,13 +168,13 @@ export default function ContactUsPage() {
                     required
                     rows={4}
                     placeholder="Describe your current strategic challenge or transformation goal..."
-                    className="w-full px-5 py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
+                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-white dark:bg-dark border border-dark/10 dark:border-white/10 focus:outline-none focus:border-primary text-sm"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-primary text-white font-semibold rounded-full hover:bg-dark transition duration-300 shadow-lg"
+                  className="w-full py-3.5 sm:py-4 bg-primary text-white font-semibold rounded-full hover:bg-dark transition duration-300 shadow-lg text-sm sm:text-base"
                 >
                   Submit Executive Inquiry
                 </button>
