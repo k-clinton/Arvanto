@@ -49,8 +49,9 @@ export function Header() {
           xl:left-[260px] xl:right-[260px]
           rounded-full
           transition-all duration-500 ease-in-out
+          outline-none border-none
           ${isScrolled
-            ? "bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)] border border-black/5 dark:border-white/10"
+            ? "bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
             : "bg-transparent shadow-none"
           }
         `}
