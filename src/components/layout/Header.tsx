@@ -96,7 +96,7 @@ export function Header() {
                   useDarkContent ? "text-primary" : "text-white"
                 }`}
               />
-              <span>+254 700 000 000</span>
+              <span>+254 743 057 056</span>
             </a>
 
             {/* Divider — desktop only */}
