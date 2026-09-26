@@ -67,7 +67,7 @@ export default function TermsAndConditionsPage() {
               Arvanto delivers high level business transformation, corporate strategy, artificial intelligence enablement, data intelligence, quantitative risk modelling, and operational restructuring consulting.
             </p>
             <p className="mb-4">
-              Informational materials, articles, research papers, and case studies published on our public platforms are intended solely for general thought-leadership and executive briefing purposes. They do not constitute formal legal, investment, regulatory, or tax advice.
+              Informational materials, articles, research papers, and case studies published on our public platforms are intended solely for general thought leadership and executive briefing purposes. They do not constitute formal legal, investment, regulatory, or tax advice.
             </p>
             <p>
               Formal client engagements are governed by bespoke Statements of Work (SOW) or Master Services Agreements (MSA), which supersede general web terms in the event of any specific conflict.
@@ -90,7 +90,7 @@ export default function TermsAndConditionsPage() {
             <ul className="list-disc pl-6 space-y-2 mb-4 text-dark/70 dark:text-white/70">
               <li>You may not copy, reproduce, reverse engineer, republish, or redistribute Arvanto&apos;s proprietary methodologies without prior written consent.</li>
               <li>Deliverables created specifically for clients under a formalized contract will adhere to the intellectual property assignment guidelines set forth in the governing engagement contract.</li>
-              <li>The Arvanto name, logo mark, and associated brand assets are protected trademarks and may not be used in connection with any third-party product or service without explicit authorization.</li>
+              <li>The Arvanto name, logo mark, and associated brand assets are protected trademarks and may not be used in connection with any third party product or service without explicit authorization.</li>
             </ul>
           </section>
 
@@ -105,7 +105,7 @@ export default function TermsAndConditionsPage() {
               </h2>
             </div>
             <p className="mb-4">
-              Clients and users accessing Arvanto resources agree to provide accurate, up-to-date information and to protect any confidential materials, proprietary insights, or non-public data shared during prospective or active consulting discussions.
+              Clients and users accessing Arvanto resources agree to provide accurate, up to date information and to protect any confidential materials, proprietary insights, or non-public data shared during prospective or active consulting discussions.
             </p>
             <p>
               Both parties agree to exercise rigorous safeguards, complying with international best practices for corporate security, data privacy, and non-disclosure standards.
