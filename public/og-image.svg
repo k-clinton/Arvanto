@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="36" fill="#07141E"/>
+  <rect x="42" y="42" width="1116" height="546" rx="28" fill="url(#paint0_linear_1_2)" fill-opacity="0.7"/>
+  <circle cx="980" cy="150" r="170" fill="#5ED1FF" fill-opacity="0.15"/>
+  <circle cx="840" cy="470" r="210" fill="#2B8CFF" fill-opacity="0.12"/>
+  <path d="M165 418C234.5 324.5 328.5 275 447 275H515C486.5 317.5 470 370 470 431C470 485 490 533.5 529 576H417.5C337 576 271.5 535 165 418Z" fill="#61D4FF" fill-opacity="0.65"/>
+  <path d="M547 240H693L766 453H620L547 240Z" fill="#FFFFFF" fill-opacity="0.14"/>
+  <path d="M742 240H887L960 453H815L742 240Z" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="98" y="200" fill="#EAFBFF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="6">ARVANTO</text>
+  <text x="98" y="292" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">Strategy.</text>
+  <text x="98" y="378" fill="#7CD8FF" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">Intelligence.</text>
+  <text x="98" y="464" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">Transformation.</text>
+  <text x="98" y="538" fill="#B7D6E9" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">Global business transformation &amp; value creation consultancy</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="52" y1="56" x2="1162" y2="582" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2433"/>
+      <stop offset="0.5" stop-color="#122B3E"/>
+      <stop offset="1" stop-color="#0A1B28"/>
+    </linearGradient>
+  </defs>
+</svg>
