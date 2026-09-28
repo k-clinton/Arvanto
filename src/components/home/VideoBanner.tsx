@@ -1,37 +1,68 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export function VideoBanner() {
+  const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      videoRef.current.load();
-      videoRef.current.play().catch((error) => {
-        console.error("Autoplay was prevented by browser:", error);
-      });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      setShouldLoadVideo(false);
+      return;
     }
+
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!shouldLoadVideo || !videoRef.current) return;
+
+    const video = videoRef.current;
+    video.defaultMuted = true;
+    video.muted = true;
+    video.load();
+    video.play().catch(() => {
+      // Autoplay may be blocked until user interaction; the poster remains visible.
+    });
+  }, [shouldLoadVideo]);
+
   return (
-    <section className="py-12 bg-white dark:bg-black">
+    <section ref={sectionRef} className="py-12 bg-white dark:bg-black">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="relative rounded-t-2xl overflow-hidden">
           <video
             ref={videoRef}
             className="w-full absolute inset-0 object-cover z-0 h-full"
-            autoPlay
+            autoPlay={shouldLoadVideo}
             loop
             muted
             playsInline
-            preload="auto"
+            preload={shouldLoadVideo ? "auto" : "none"}
+            poster="/images/heroBanner.png"
             aria-label="Background video showing digital transformation"
+            style={{ backgroundImage: "url('/images/heroBanner.png')" }}
           >
-            <source src="/videos/banner.mp4" type="video/mp4" />
+            {shouldLoadVideo && <source src="/videos/banner.mp4" type="video/mp4" />}
           </video>
           <div className="relative z-10 lg:py-48 md:py-28 py-12 sm:py-16 px-4">
             <div className="flex flex-col items-center gap-6 sm:gap-8">
