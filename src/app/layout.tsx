@@ -6,6 +6,7 @@ import { MainContent } from "@/components/layout/MainContent";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arvanto.com"),
   title: "Arvanto — Strategy. Intelligence. Transformation.",
   description:
     "Global Business Transformation & Value Creation Consultancy combining strategy, artificial intelligence, data analytics, and quantitative intelligence.",
@@ -23,16 +24,39 @@ export const metadata: Metadata = {
     "Data Analytics",
     "Quantitative Risk",
     "Kenya",
-    "East Africa"
+    "East Africa",
   ],
   authors: [{ name: "Arvanto" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Arvanto — Strategy. Intelligence. Transformation.",
     description:
       "Turning complexity into opportunity. We combine strategy, technology, data, and quantitative intelligence to help organizations build resilient businesses.",
+    url: "https://arvanto.com",
     type: "website",
     locale: "en_US",
     siteName: "Arvanto",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Arvanto — Strategy. Intelligence. Transformation.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arvanto — Strategy. Intelligence. Transformation.",
+    description:
+      "Turning complexity into opportunity. We combine strategy, technology, data, and quantitative intelligence to help organizations build resilient businesses.",
+    images: ["/og-image.svg"],
   },
 };
 
