@@ -155,6 +155,7 @@ export default function ContactUsPage() {
                       <option>Data & Decision Intelligence</option>
                       <option>Risk & Performance</option>
                       <option>Transformation & Operations</option>
+                      <option>Tax Advisory & Compliance</option>
                       <option>Arvanto Ventures Partnership</option>
                     </select>
                   </div>
