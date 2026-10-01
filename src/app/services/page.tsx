@@ -13,10 +13,10 @@ export default function ServicesPage() {
             Arvanto Capabilities
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
-            5 Core Practices. End to End Execution.
+            6 Core Practices. End to End Execution.
           </h1>
           <p className="text-sm sm:text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, and Operating Transformation.
+            Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, Operating Transformation, and Tax Advisory & Compliance.
           </p>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
                   href="/contactus"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-dark transition duration-300 text-sm sm:text-base"
                 >
-                  <span>Inquire About {cap.title}</span>
+                  <span>{cap.inquiryLabel ?? `Inquire About ${cap.title}`}</span>
                   <Icon icon="ph:arrow-right-bold" className="w-4 h-4" />
                 </Link>
               </div>
