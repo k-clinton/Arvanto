@@ -65,7 +65,7 @@ export function HeroSection() {
               <div className="bg-primary/10 dark:bg-primary/20 p-2 sm:p-2.5 rounded-full text-primary">
                 <Icon icon="ph:chart-line-up-bold" className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-dark dark:text-white mt-1">5 Core Practices</p>
+              <p className="text-xs sm:text-sm font-semibold text-dark dark:text-white mt-1">6 Core Practices</p>
               <p className="text-[11px] sm:text-xs text-black/45 dark:text-white/45">Strategy to Scale</p>
             </div>
 
