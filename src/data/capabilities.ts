@@ -137,7 +137,7 @@ export const CAPABILITIES: Capability[] = [
     description: "Arvanto Tax provides strategic tax advisory and compliance support to help organizations navigate complex tax obligations, manage exposure, and make informed decisions across their business and investment activities. We integrate tax considerations into broader strategy, transactions, risk management, and organizational performance.",
     detailedDescription: "Arvanto Tax provides strategic tax advisory and compliance support to help organizations navigate complex tax obligations, manage exposure, and make informed decisions across their business and investment activities. We integrate tax considerations into broader strategy, transactions, risk management, and organizational performance.",
     icon: "ph:chart-pie-slice-bold",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/tax-advisory.jpg",
     inquiryLabel: "Inquire About Tax Advisory",
     colSpan: "lg:col-span-6 col-span-12",
     keyServices: [
