@@ -9,18 +9,16 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#5bb3e8] via-[#90cef4] to-[#dff0fb] dark:from-[#1a3a4f] dark:via-[#1e4d6b] dark:to-[#0d2233]" />
 
       {/* Hero Architectural Visual - Optimized for mobile & desktop */}
-      <div className="absolute top-16 md:top-0 right-0 w-full md:w-[54%] h-[45%] sm:h-[60%] md:h-[85%] z-10 pointer-events-none flex items-start md:items-center justify-end">
+      <div className="absolute top-10 sm:top-14 md:top-0 right-0 w-full md:w-[58%] lg:w-[62%] xl:w-[65%] h-[52%] sm:h-[65%] md:h-[92%] lg:h-full z-10 pointer-events-none flex items-start md:items-center justify-end">
         <div className="relative w-full h-full">
           <Image
             src="/images/heroBanner.png"
             alt="Modern architectural building – Arvanto"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 54vw"
-            className="object-contain object-right-top md:object-right mix-blend-screen opacity-90 md:opacity-100"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 62vw, 65vw"
+            className="object-contain object-right-top md:object-right scale-100 sm:scale-105 md:scale-110 lg:scale-115 origin-right transition-transform duration-700"
           />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#dff0fb]/70 dark:to-[#0d2233]/70 md:block hidden pointer-events-none" />
         </div>
       </div>
 
