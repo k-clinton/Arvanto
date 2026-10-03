@@ -5,7 +5,7 @@ import { INDUSTRIES } from "@/data/industries";
 
 export default function IndustriesPage() {
   return (
-    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Banner */}
       <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 mb-12 sm:mb-16">
         <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left">
