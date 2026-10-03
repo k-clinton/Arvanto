@@ -17,7 +17,7 @@ export default async function InsightDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-28 sm:pt-32 pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
       <div className="container max-w-4xl mx-auto px-4 sm:px-5 2xl:px-0">
         <Link
           href="/insights"
