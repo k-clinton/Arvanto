@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#5bb3e8] via-[#90cef4] to-[#dff0fb] dark:from-[#1a3a4f] dark:via-[#1e4d6b] dark:to-[#0d2233]" />
 
       {/* Hero Architectural Visual - Optimized for mobile & desktop */}
-      <div className="absolute top-10 sm:top-14 md:top-0 right-0 w-full md:w-[58%] lg:w-[62%] xl:w-[65%] h-[52%] sm:h-[65%] md:h-[92%] lg:h-full z-10 pointer-events-none flex items-start md:items-center justify-end">
+      <div className="absolute -top-4 sm:top-0 md:-top-12 right-0 w-full md:w-[58%] lg:w-[62%] xl:w-[65%] h-[52%] sm:h-[65%] md:h-[92%] lg:h-full z-10 pointer-events-none flex items-start md:items-center justify-end">
         <div className="relative w-full h-full">
           <Image
             src="/images/heroBanner.png"
