@@ -10,7 +10,7 @@ export function MainContent({ children }: { children: React.ReactNode }) {
   return (
     <main
       className={`min-h-screen transition-all duration-300 ${
-        !isHome ? "pt-16 sm:pt-18 lg:pt-20" : ""
+        !isHome ? "pt-[calc(72px+0.2in)] sm:pt-[calc(94px+0.2in)] lg:pt-[calc(104px+0.2in)]" : ""
       }`}
     >
       {children}
