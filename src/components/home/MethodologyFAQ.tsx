@@ -18,8 +18,8 @@ export function MethodologyFAQ() {
     <section className="py-16 sm:py-24 bg-white dark:bg-black" id="faqs">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left Column Image */}
-          <div className="lg:mx-0 mx-auto w-full">
+          {/* Sticky image on the left */}
+          <div className="lg:sticky lg:top-24 lg:mx-0 mx-auto w-full self-start">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[300px] sm:h-[420px] lg:h-[644px]">
               <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
@@ -41,7 +41,7 @@ export function MethodologyFAQ() {
             </div>
           </div>
 
-          {/* Right Column Accordion Content */}
+          {/* Keep headings fixed while the methodology or FAQ data scrolls */}
           <div className="lg:px-6">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <button
@@ -82,7 +82,7 @@ export function MethodologyFAQ() {
             </p>
 
             {/* Accordion List */}
-            <div className="flex flex-col gap-3 sm:gap-4">
+            <div className="flex flex-col gap-3 sm:gap-4 lg:max-h-[644px] lg:overflow-y-auto lg:pr-2">
               {activeTab === "methodology"
                 ? METHODOLOGY_STEPS.map((step, idx) => {
                     const isOpen = openIndex === idx;
