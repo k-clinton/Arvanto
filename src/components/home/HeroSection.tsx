@@ -13,7 +13,7 @@ export function HeroSection() {
         <div className="relative w-full h-full">
           <Image
             src="/images/heroBanner.png"
-            alt="Modern architectural building – Arvanto"
+            alt="Arvanto consultancy office – Arvanto"
             fill
             priority
             sizes="(max-width: 640px) 120vw, (max-width: 768px) 100vw, (max-width: 1200px) 62vw, 65vw"
