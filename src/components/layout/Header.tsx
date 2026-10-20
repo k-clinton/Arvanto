@@ -13,11 +13,8 @@ export function Header() {
   const pathname = usePathname();
 
   const isHome = pathname === "/";
-  // Navbar background: transparent at top, solid when scrolled — on ALL pages
-  // Text color logic: when unscrolled on home (dark bg) => white text;
-  //                    when unscrolled on non-home (white bg) => dark text;
-  //                    when scrolled (white navbar bg) => dark text always
-  const useDarkContent = isScrolled || !isHome;
+  // Use white content over the transparent header, then switch to theme-aware colors when scrolled.
+  const useDarkContent = isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,15 +103,12 @@ export function Header() {
               }`}
             />
 
-            {/* Keep the menu button dark-on-light while the non-home banner is behind the header. */}
             <button
               onClick={() => setIsMenuOpen(true)}
               className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all duration-500 cursor-pointer ${
-                !isHome && !isScrolled
-                  ? "bg-white border-white text-dark hover:bg-primary hover:border-primary hover:text-white"
-                  : useDarkContent
+                useDarkContent
                   ? "bg-dark dark:bg-white border-dark dark:border-white text-white dark:text-dark hover:bg-primary hover:border-primary hover:text-white"
-                  : "bg-white border-white text-dark hover:bg-primary hover:border-primary hover:text-white"
+                  : "bg-transparent border-white text-white hover:bg-primary hover:border-primary hover:text-white"
               }`}
               aria-label="Open navigation menu"
             >
