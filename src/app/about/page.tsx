@@ -6,8 +6,8 @@ export default function AboutPage() {
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Banner */}
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 mb-12 sm:mb-16">
-        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left relative overflow-hidden">
+      <div className="mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
+        <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-6 sm:py-12 md:py-20 text-center md:text-left">
           <span className="text-[11px] sm:text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
             About Arvanto
           </span>
