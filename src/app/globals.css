@@ -19,6 +19,66 @@
   scrollbar-width: none;
 }
 
+@keyframes arvanto-loader-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes arvanto-loader-glow {
+  0%,
+  100% {
+    box-shadow: 0 14px 50px rgba(2, 132, 199, 0.22);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 20px 60px rgba(7, 190, 138, 0.3);
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes arvanto-loader-progress {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+.arvanto-loader-grid {
+  background-image:
+    linear-gradient(to right, rgb(2 132 199 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(2 132 199 / 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
+}
+
+.arvanto-loader-orbit {
+  animation: arvanto-loader-orbit 9s linear infinite;
+}
+
+.arvanto-loader-orbit-reverse {
+  animation-duration: 13s;
+  animation-direction: reverse;
+}
+
+.arvanto-loader-glow {
+  animation: arvanto-loader-glow 3s ease-in-out infinite;
+}
+
+.arvanto-loader-progress > span {
+  animation: arvanto-loader-progress 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arvanto-loader-orbit,
+  .arvanto-loader-glow,
+  .arvanto-loader-progress > span {
+    animation: none;
+  }
+}
+
 /* Custom progress bar style */
 #nprogress .bar {
   background: #07be8a !important;
