@@ -106,15 +106,13 @@ export function Header() {
               }`}
             />
 
-            {/*
-             * Menu Button
-             * Home top state: white bg + dark text
-             * Scrolled / non-Home: dark bg + white text (or white in dark theme)
-             */}
+            {/* Keep the menu button dark-on-light while the non-home banner is behind the header. */}
             <button
               onClick={() => setIsMenuOpen(true)}
               className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all duration-500 cursor-pointer ${
-                useDarkContent
+                !isHome && !isScrolled
+                  ? "bg-white border-white text-dark hover:bg-primary hover:border-primary hover:text-white"
+                  : useDarkContent
                   ? "bg-dark dark:bg-white border-dark dark:border-white text-white dark:text-dark hover:bg-primary hover:border-primary hover:text-white"
                   : "bg-white border-white text-dark hover:bg-primary hover:border-primary hover:text-white"
               }`}
