@@ -7,8 +7,8 @@ export default function InsightsPage() {
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
       {/* Banner */}
-      <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 mb-12 sm:mb-16">
-        <div className="bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 rounded-3xl p-6 sm:p-12 md:p-20 text-center md:text-left">
+      <div className="-mt-[calc(72px+0.2in)] pt-[calc(72px+0.2in)] sm:-mt-[calc(94px+0.2in)] sm:pt-[calc(94px+0.2in)] lg:-mt-[calc(104px+0.2in)] lg:pt-[calc(104px+0.2in)] mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
+        <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 py-6 sm:py-12 md:py-20 text-center md:text-left">
           <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
             Arvanto Research & Briefings
           </span>
