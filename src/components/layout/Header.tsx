@@ -12,7 +12,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  const isHome = pathname === "/";
   // Use white content over the transparent header, then switch to theme-aware colors when scrolled.
   const useDarkContent = isScrolled;
 
