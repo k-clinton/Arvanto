@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
-const INITIAL_LOADING_DURATION = 2500;
-const NAVIGATION_LOADING_DURATION = 1000;
+const INITIAL_LOADING_DURATION = 3000;
+const NAVIGATION_LOADING_DURATION = 1300;
 
 export function RouteLoadingOverlay() {
   const pathname = usePathname();
