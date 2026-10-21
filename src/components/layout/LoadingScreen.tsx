@@ -3,7 +3,7 @@ import { ArvantoLogoMark } from "@/components/common/ArvantoLogoMark";
 export function LoadingScreen() {
   return (
     <div
-      className="fixed inset-0 z-[100] flex min-h-screen items-center justify-center overflow-hidden bg-[#f7fbfd] text-dark dark:bg-[#070b12] dark:text-white"
+      className="fixed inset-0 z-[100] flex min-h-screen items-center justify-center overflow-hidden bg-white/25 text-dark backdrop-blur-[2px] dark:bg-black/30 dark:text-white"
       role="status"
       aria-label="Loading Arvanto"
     >
@@ -11,7 +11,7 @@ export function LoadingScreen() {
       <div className="pointer-events-none absolute -left-32 -top-40 h-96 w-96 rounded-full bg-skyblue/10 blur-3xl dark:bg-skyblue/20" aria-hidden="true" />
       <div className="pointer-events-none absolute -bottom-48 -right-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl dark:bg-primary/10" aria-hidden="true" />
 
-      <div className="relative flex w-full max-w-xl flex-col items-center px-6 text-center">
+      <div className="relative flex w-full max-w-xl flex-col items-center rounded-[2rem] border border-white/40 bg-white/55 px-6 py-8 text-center shadow-2xl shadow-dark/10 backdrop-blur-xl dark:border-white/10 dark:bg-dark/60 dark:shadow-black/20 sm:px-10 sm:py-10">
         <div className="relative mb-9 flex h-32 w-32 items-center justify-center">
           <div className="arvanto-loader-orbit absolute inset-0 rounded-full border border-skyblue/20 dark:border-skyblue/30" aria-hidden="true">
             <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_18px_rgba(7,190,138,0.8)]" />
