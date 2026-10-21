@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { flushSync } from "react-dom";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
 const MINIMUM_LOADING_DURATION = 3000;
@@ -51,7 +50,7 @@ export function RouteLoadingOverlay() {
         hideTimeout.current = null;
       }
       navigationStartedAt.current = performance.now();
-      flushSync(() => setIsVisible(true));
+      setIsVisible(true);
     };
 
     document.addEventListener("click", handleClick, true);
