@@ -4,13 +4,17 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
-const MINIMUM_LOADING_DURATION = 3000;
+const MINIMUM_LOADING_DURATION = 2000;
 
 export function RouteLoadingOverlay() {
   const pathname = usePathname();
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const navigationStartedAt = useRef<number | null>(null);
   const hideTimeout = useRef<number | null>(null);
+
+  useEffect(() => {
+    navigationStartedAt.current = performance.now();
+  }, []);
 
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
