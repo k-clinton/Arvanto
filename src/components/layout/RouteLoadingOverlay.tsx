@@ -4,12 +4,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
-const MINIMUM_LOADING_DURATION = 2000;
+const INITIAL_LOADING_DURATION = 2500;
+const NAVIGATION_LOADING_DURATION = 1000;
 
 export function RouteLoadingOverlay() {
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const navigationStartedAt = useRef<number | null>(null);
+  const minimumLoadingDuration = useRef(INITIAL_LOADING_DURATION);
   const hideTimeout = useRef<number | null>(null);
 
   useEffect(() => {
@@ -54,6 +56,7 @@ export function RouteLoadingOverlay() {
         hideTimeout.current = null;
       }
       navigationStartedAt.current = performance.now();
+      minimumLoadingDuration.current = NAVIGATION_LOADING_DURATION;
       setIsVisible(true);
     };
 
@@ -67,7 +70,7 @@ export function RouteLoadingOverlay() {
 
     const remainingDuration = Math.max(
       0,
-      MINIMUM_LOADING_DURATION - (performance.now() - startedAt),
+      minimumLoadingDuration.current - (performance.now() - startedAt),
     );
 
     hideTimeout.current = window.setTimeout(() => {
