@@ -7,6 +7,7 @@ export function VideoBanner() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -27,7 +28,7 @@ export function VideoBanner() {
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin: "800px" }
     );
 
     observer.observe(node);
@@ -40,29 +41,29 @@ export function VideoBanner() {
     const video = videoRef.current;
     video.defaultMuted = true;
     video.muted = true;
-    video.load();
     video.play().catch(() => {
-      // Autoplay may be blocked until user interaction; the poster remains visible.
+      // Autoplay may be blocked until user interaction; the gradient background remains visible.
     });
   }, [shouldLoadVideo]);
 
   return (
     <section ref={sectionRef} className="py-12 bg-white dark:bg-black">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
-        <div className="relative rounded-t-2xl overflow-hidden">
+        <div className="relative overflow-hidden rounded-t-2xl bg-gradient-to-br from-dark via-[#123a52] to-skyblue">
           <video
             ref={videoRef}
-            className="w-full absolute inset-0 object-cover z-0 h-full"
+            className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
+              hasStarted ? "opacity-100" : "opacity-0"
+            }`}
             autoPlay={shouldLoadVideo}
             loop
             muted
             playsInline
-            preload={shouldLoadVideo ? "auto" : "none"}
-            poster="/images/heroBanner.png"
+            preload={shouldLoadVideo ? "auto" : "metadata"}
+            onPlaying={() => setHasStarted(true)}
             aria-label="Background video showing digital transformation"
-            style={{ backgroundImage: "url('/images/heroBanner.png')" }}
           >
-            {shouldLoadVideo && <source src="/videos/banner.mp4" type="video/mp4" />}
+            <source src="/videos/banner.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 lg:py-48 md:py-28 py-12 sm:py-16 px-4">
             <div className="flex flex-col items-center gap-6 sm:gap-8">
