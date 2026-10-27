@@ -31,8 +31,8 @@ export const INSIGHTS: Insight[] = [
     category: "Transformation",
     date: "Aug 28, 2026",
     readTime: "8 min read",
-    excerpt: "Why 70% of digital transformations fail to realize expected margins—and how mathematical scenario modelling bridges the execution gap.",
-    content: "Transformation initiatives often falter due to qualitative goals without quantitative feedback loops. In this briefing, we break down our 5-Stage Methodology for tracking financial metrics at every milestone...",
+    excerpt: "Why 70% of digital transformations fail to realize expected margins and how mathematical scenario modelling bridges the execution gap.",
+    content: "Transformation initiatives often falter due to qualitative goals without quantitative feedback loops. In this briefing, we break down our 5 Stage Methodology for tracking financial metrics at every milestone...",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     author: "Arvanto Advisory Team"
   },
