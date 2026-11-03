@@ -15,7 +15,7 @@ export default function AboutPage() {
             Turning Complexity into Opportunity.
           </h1>
           <p className="text-sm sm:text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Arvanto is a global business transformation & value creation consultancy founded in Africa. We combine strategy, technology, data, and quantitative intelligence to help organizations make better decisions and achieve measurable results.
+            Arvanto is a global business transformation & value creation consultancy founded in Africa. We combine strategy, technology, data, and quantitative intelligence to help organizations and businesses make better decisions and achieve measurable results.
           </p>
         </div>
       </div>
