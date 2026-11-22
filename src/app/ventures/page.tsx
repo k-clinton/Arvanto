@@ -9,7 +9,12 @@ export default function VenturesPage() {
         eyebrow="Arvanto Ventures"
         title="Venture Building & Strategic Investments"
         description="Building next generation business units, developing proprietary enterprise technology, and exploring long term equity positions in promising ventures."
-        image="/images/heroBanner.png"
+        images={[
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-technology.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-finance.jpg",
+        ]}
       />
 
       {/* Overview */}
