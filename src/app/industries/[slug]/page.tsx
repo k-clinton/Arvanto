@@ -44,7 +44,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
         eyebrow={industry.tagline}
         title={industry.name}
         description={industry.description}
-        image={industry.image}
+        images={industry.heroImages}
       />
 
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-12 sm:py-20">
