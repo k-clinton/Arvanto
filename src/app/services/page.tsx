@@ -23,13 +23,13 @@ export default function ServicesPage() {
 
       {/* Practices List */}
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-4 sm:py-8 space-y-12 sm:space-y-20">
-        {CAPABILITIES.map((cap) => (
+        {CAPABILITIES.map((cap, index) => (
           <div
             key={cap.id}
             id={cap.slug}
-            className="grid md:grid-cols-12 gap-8 sm:gap-10 items-center p-6 sm:p-8 md:p-12 rounded-3xl border border-dark/10 dark:border-white/10 bg-dark/5 dark:bg-white/5 scroll-mt-32"
+            className="grid md:grid-cols-12 gap-8 sm:gap-10 md:gap-14 items-center scroll-mt-32"
           >
-            <div className="md:col-span-6 space-y-4 sm:space-y-6">
+            <div className={`md:col-span-6 space-y-4 sm:space-y-6 ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/10 p-2.5 sm:p-3 rounded-full text-primary shrink-0">
                   <Icon icon={cap.icon} className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -68,7 +68,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className="md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className={`md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative overflow-hidden ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
               <Image
                 src={cap.image}
                 alt={cap.title}
