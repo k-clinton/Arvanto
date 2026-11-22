@@ -19,7 +19,11 @@ export default function PrivacyPolicyPage() {
         title="Privacy Policy"
         titleClassName="max-w-5xl text-3xl sm:text-4xl md:text-6xl"
         description="Arvanto is committed to safeguarding the privacy, confidentiality, and integrity of corporate data and personal information entrusted to us."
-        image="/images/tax-advisory.jpg"
+        images={[
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-team.jpg",
+        ]}
       >
         <div className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/80 bg-black/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
           <Icon icon="ph:shield-check-bold" className="w-3.5 h-3.5" />
