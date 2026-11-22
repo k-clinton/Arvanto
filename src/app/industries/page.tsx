@@ -2,24 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { INDUSTRIES } from "@/data/industries";
+import { PageHero } from "@/components/common/PageHero";
 
 export default function IndustriesPage() {
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
-      {/* Banner */}
-      <div className="-mt-[72px] pt-[72px] sm:-mt-[94px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
-        <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-12 md:pb-20 text-center md:text-left">
-          <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
-            Priority Sectors
-          </span>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-4 mb-4 sm:mb-6 leading-tight">
-            Industry Intelligence & Sector Focus
-          </h1>
-          <p className="text-base md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Deep domain expertise across Financial Services, Healthcare, Technology, Energy, Consumer Retail, the Public Sector, and Legal & Professional Services.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Priority Sectors"
+        title="Industry Intelligence & Sector Focus"
+        description="Deep domain expertise across Financial Services, Healthcare, Technology, Energy, Consumer Retail, the Public Sector, and Legal & Professional Services."
+        image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85"
+      />
 
       {/* Industries Grid */}
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-8">
