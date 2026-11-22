@@ -11,7 +11,12 @@ export default function ServicesPage() {
         eyebrow="Arvanto Capabilities"
         title="6 Core Practices. End to End Execution."
         description="Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, Operating Transformation, and Tax Advisory & Compliance."
-        image="/images/heroBanner.png"
+        images={[
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-finance.jpg",
+          "/images/page-hero-team.jpg",
+        ]}
       />
 
       {/* Practices List */}
