@@ -2,24 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { CAPABILITIES } from "@/data/capabilities";
+import { PageHero } from "@/components/common/PageHero";
 
 export default function ServicesPage() {
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
-      {/* Banner */}
-      <div className="-mt-[72px] pt-[72px] sm:-mt-[94px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
-        <div className="container max-w-8xl mx-auto px-5 2xl:px-0 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-12 md:pb-20 text-center md:text-left">
-          <span className="text-[11px] sm:text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
-            Arvanto Capabilities
-          </span>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
-            6 Core Practices. End to End Execution.
-          </h1>
-          <p className="text-sm sm:text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, Operating Transformation, and Tax Advisory & Compliance.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Arvanto Capabilities"
+        title="6 Core Practices. End to End Execution."
+        description="Discover our core divisions across Strategy & Growth, AI & Technology, Data & Decision Intelligence, Risk & Performance, Operating Transformation, and Tax Advisory & Compliance."
+        image="/images/heroBanner.png"
+      />
 
       {/* Practices List */}
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-4 sm:py-8 space-y-12 sm:space-y-20">
