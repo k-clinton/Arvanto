@@ -19,7 +19,11 @@ export default function TermsAndConditionsPage() {
         title="Terms & Conditions"
         titleClassName="max-w-5xl text-3xl sm:text-4xl md:text-6xl"
         description="These terms govern your access to Arvanto&apos;s digital platforms, advisory engagements, quantitative frameworks, and executive intelligence briefings."
-        image="/images/tax-advisory.jpg"
+        images={[
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-team.jpg",
+        ]}
       >
         <div className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/80 bg-black/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
           <Icon icon="ph:clock-bold" className="w-3.5 h-3.5" />
