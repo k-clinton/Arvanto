@@ -71,11 +71,71 @@
   animation: arvanto-loader-progress 1.6s ease-in-out infinite;
 }
 
+.service-practice {
+  --service-delay: 0ms;
+}
+
+.service-practice:nth-child(2) {
+  --service-delay: 80ms;
+}
+
+.service-practice:nth-child(3) {
+  --service-delay: 160ms;
+}
+
+.service-practice:nth-child(4) {
+  --service-delay: 240ms;
+}
+
+.service-practice:nth-child(5) {
+  --service-delay: 320ms;
+}
+
+.service-practice:nth-child(6) {
+  --service-delay: 400ms;
+}
+
+.service-copy,
+.service-image {
+  animation: service-fade-in 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--service-delay);
+}
+
+.service-image-content {
+  transition: transform 700ms ease-out;
+}
+
+.service-image:hover .service-image-content {
+  transform: scale(1.035);
+}
+
+.service-cta-arrow {
+  transition: transform 300ms ease;
+}
+
+@keyframes service-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .arvanto-loader-orbit,
   .arvanto-loader-glow,
-  .arvanto-loader-progress > span {
+  .arvanto-loader-progress > span,
+  .service-copy,
+  .service-image {
     animation: none;
+  }
+
+  .service-image-content,
+  .service-cta-arrow {
+    transition: none;
   }
 }
 
