@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { PageHero } from "@/components/common/PageHero";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions — Arvanto",
@@ -13,24 +14,18 @@ export default function TermsAndConditionsPage() {
 
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
-      {/* Hero Banner */}
-      <div className="-mt-[72px] pt-[72px] sm:-mt-[94px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
-        <div className="container max-w-8xl mx-auto px-4 sm:px-5 2xl:px-0 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-12 md:pb-20 text-center md:text-left">
-          <span className="text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
-            Legal & Compliance
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-4 mb-4 leading-tight">
-            Terms & Conditions
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            These terms govern your access to Arvanto&apos;s digital platforms, advisory engagements, quantitative frameworks, and executive intelligence briefings.
-          </p>
-          <div className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/80 bg-black/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
-            <Icon icon="ph:clock-bold" className="w-3.5 h-3.5" />
-            Last Updated: {lastUpdated}
-          </div>
+      <PageHero
+        eyebrow="Legal & Compliance"
+        title="Terms & Conditions"
+        titleClassName="max-w-5xl text-3xl sm:text-4xl md:text-6xl"
+        description="These terms govern your access to Arvanto&apos;s digital platforms, advisory engagements, quantitative frameworks, and executive intelligence briefings."
+        image="/images/tax-advisory.jpg"
+      >
+        <div className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/80 bg-black/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
+          <Icon icon="ph:clock-bold" className="w-3.5 h-3.5" />
+          Last Updated: {lastUpdated}
         </div>
-      </div>
+      </PageHero>
 
       {/* Content Container */}
       <div className="container max-w-5xl mx-auto px-4 sm:px-5 2xl:px-0 py-4 sm:py-8">
