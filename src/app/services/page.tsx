@@ -27,9 +27,9 @@ export default function ServicesPage() {
           <div
             key={cap.id}
             id={cap.slug}
-            className="grid md:grid-cols-12 gap-8 sm:gap-10 md:gap-14 items-center scroll-mt-32"
+            className="service-practice grid md:grid-cols-12 gap-8 sm:gap-10 md:gap-14 items-center scroll-mt-32"
           >
-            <div className={`md:col-span-6 space-y-4 sm:space-y-6 ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
+            <div className={`service-copy md:col-span-6 space-y-4 sm:space-y-6 ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/10 p-2.5 sm:p-3 rounded-full text-primary shrink-0">
                   <Icon icon={cap.icon} className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -60,20 +60,20 @@ export default function ServicesPage() {
               <div className="pt-4 sm:pt-6">
                 <Link
                   href="/contactus"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-dark transition duration-300 text-sm sm:text-base"
+                  className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-dark transition duration-300 text-sm sm:text-base"
                 >
                   <span>{cap.inquiryLabel ?? `Inquire About ${cap.title}`}</span>
-                  <Icon icon="ph:arrow-right-bold" className="w-4 h-4" />
+                  <Icon icon="ph:arrow-right-bold" className="service-cta-arrow w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
 
-            <div className={`md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative overflow-hidden ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
+            <div className={`service-image md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative overflow-hidden ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
               <Image
                 src={cap.image}
                 alt={cap.title}
                 fill
-                className="object-cover"
+                className="service-image-content object-cover transition-transform duration-700 ease-out"
               />
             </div>
           </div>
