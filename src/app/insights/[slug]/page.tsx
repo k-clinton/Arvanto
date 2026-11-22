@@ -24,7 +24,12 @@ export default async function InsightDetailPage({ params }: Props) {
         title={article.title}
         titleClassName="max-w-5xl text-3xl sm:text-4xl md:text-5xl"
         description={article.excerpt}
-        image={article.image}
+        images={[
+          article.image,
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-team.jpg",
+        ]}
       >
         <p className="mt-5 text-xs sm:text-sm text-white/75">
           Published on {article.date} • {article.readTime} • By {article.author}
