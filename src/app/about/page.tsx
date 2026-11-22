@@ -1,24 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { PageHero } from "@/components/common/PageHero";
 
 export default function AboutPage() {
   return (
     <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
-      {/* Banner */}
-      <div className="-mt-[72px] pt-[72px] sm:-mt-[94px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] mb-12 sm:mb-16 bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10">
-        <div className="container max-w-8xl mx-auto px-5 2xl:px-0 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-12 md:pb-20 text-center md:text-left">
-          <span className="text-[11px] sm:text-xs uppercase tracking-widest text-primary font-bold bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
-            About Arvanto
-          </span>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
-            Turning Complexity into Opportunity.
-          </h1>
-          <p className="text-sm sm:text-lg md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Arvanto is a global business transformation & value creation consultancy founded in Africa. We combine strategy, technology, data, and quantitative intelligence to help organizations and businesses make better decisions and achieve measurable results.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="About Arvanto"
+        title="Turning Complexity into Opportunity."
+        description="Arvanto is a global business transformation & value creation consultancy founded in Africa. We combine strategy, technology, data, and quantitative intelligence to help organizations and businesses make better decisions and achieve measurable results."
+        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=85"
+      />
 
       {/* Vision & Mission Grid */}
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-4 sm:py-8">
