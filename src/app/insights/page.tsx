@@ -11,7 +11,12 @@ export default function InsightsPage() {
         eyebrow="Arvanto Research & Briefings"
         title="Insights & Thought Leadership"
         description="Executive perspectives on corporate strategy, artificial intelligence implementation, quantitative risk management, and operating model redesign."
-        image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=85"
+        images={[
+          "/images/page-hero-technology.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-finance.jpg",
+          "/images/page-hero-city.jpg",
+        ]}
       />
 
       {/* Grid of Insights */}
