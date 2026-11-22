@@ -5,6 +5,7 @@ export interface Industry {
   tagline: string;
   description: string;
   image: string;
+  heroImages: string[];
   industryPerspective: string[];
   focusAreas: { title: string; description: string }[];
 }
@@ -16,7 +17,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Financial Services",
     tagline: "Banking, Insurance, Capital Markets & Asset Management",
     description: "Navigating regulatory shifts, modernizing core banking platforms, deploying predictive credit risk models, and launching digital finance initiatives.",
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-finance.jpg",
+    heroImages: [
+      "/images/page-hero-finance.jpg",
+      "/images/page-hero-city.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-strategy.jpg",
+    ],
     industryPerspective: [
       "Financial institutions are balancing growth and customer expectations with tighter oversight, changing risk conditions, and pressure to modernize legacy systems. These priorities are connected: a new digital product, for example, affects the operating model, data controls, and risk exposure as well as revenue.",
       "Arvanto helps leadership teams bring those considerations together. We use strategy, quantitative analysis, and transformation planning to clarify where to invest, how to manage exposure, and how to turn priorities into an executable roadmap."
@@ -46,7 +53,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Healthcare & Life Sciences",
     tagline: "Hospitals, Health Systems & Life Science Enterprises",
     description: "Optimizing patient flow, operational efficiency, medical supply chain resilience, and clinical data analytics infrastructure.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-healthcare.jpg",
+    heroImages: [
+      "/images/page-hero-healthcare.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-technology.jpg",
+      "/images/page-hero-strategy.jpg",
+    ],
     industryPerspective: [
       "Healthcare providers and life sciences organizations must improve access, quality, and affordability while working within complex operating and regulatory environments. Demand patterns, workforce capacity, supply availability, and information systems all influence the ability to deliver reliable services.",
       "We help teams understand where performance is constrained and identify changes that can be delivered responsibly. Our work connects operational analysis and data strategy with practical implementation, keeping patient outcomes, staff needs, and governance in view."
@@ -76,7 +89,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Technology & Telecom",
     tagline: "SaaS Platforms, Telecom Networks & Digital Infrastructure",
     description: "Accelerating ARR expansion, optimizing subscriber retention, modernizing network operations, and structuring strategic technology partnerships.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-technology.jpg",
+    heroImages: [
+      "/images/page-hero-technology.jpg",
+      "/images/page-hero-city.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-finance.jpg",
+    ],
     industryPerspective: [
       "Technology and telecom businesses operate in fast-moving markets where product economics, customer expectations, infrastructure investment, and competitive positioning shift quickly. Sustainable growth depends on making connected choices about where to compete, what to build, and how to scale delivery.",
       "Arvanto supports those choices with market and performance analysis, operating model design, and technology transformation planning. We help teams turn customer and operational data into clearer priorities while keeping execution grounded in commercial objectives."
@@ -106,7 +125,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Energy & Infrastructure",
     tagline: "Utilities, Renewable Energy, Logistics & Heavy Industry",
     description: "Balancing capital intensive assets with grid modernizations, operational efficiency, renewable energy transitions, and ESG risk compliance.",
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-energy.jpg",
+    heroImages: [
+      "/images/page-hero-energy.jpg",
+      "/images/page-hero-city.jpg",
+      "/images/page-hero-technology.jpg",
+      "/images/page-hero-finance.jpg",
+    ],
     industryPerspective: [
       "Energy and infrastructure organizations make long-horizon decisions in capital-intensive environments. Asset reliability, policy and market changes, financing constraints, and the transition to lower-carbon systems can all affect project viability and long-term performance.",
       "We help leaders compare options, assess uncertainty, and prioritize investment and operational improvements. Our approach brings financial and scenario analysis together with execution planning, so strategic ambitions can be translated into measurable initiatives."
@@ -136,7 +161,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Consumer & Retail",
     tagline: "FMCG, E-Commerce, Multi-unit Retail & Logistics",
     description: "Aligning omni-channel fulfillment, dynamic pricing intelligence, demand forecasting, and inventory optimization across East Africa and beyond.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-retail.jpg",
+    heroImages: [
+      "/images/page-hero-retail.jpg",
+      "/images/page-hero-finance.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-city.jpg",
+    ],
     industryPerspective: [
       "Consumer and retail businesses respond to changing preferences, price sensitivity, channel shifts, and uneven demand. These pressures make it difficult to balance availability and customer experience against inventory costs, margin targets, and complex fulfillment operations.",
       "We help organizations use market and operational evidence to make more coordinated commercial decisions. From demand planning to channel strategy, we focus on practical changes that improve visibility and connect customer priorities to how the business operates."
@@ -166,7 +197,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Public Sector & Development",
     tagline: "Government Agencies, Development Financial Institutions & NGOs",
     description: "Enabling public policy execution, revenue collection optimization, infrastructure project evaluation, and national digital infrastructure transformation.",
-    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-city.jpg",
+    heroImages: [
+      "/images/page-hero-city.jpg",
+      "/images/page-hero-strategy.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-finance.jpg",
+    ],
     industryPerspective: [
       "Public institutions and development organizations work to deliver lasting outcomes amid competing needs, limited resources, and complex stakeholder environments. Strong policy intent must be matched by sound delivery models, reliable evidence, and transparent use of funds.",
       "Arvanto helps teams strengthen the link between strategy, investment, and implementation. We bring analytical and operational perspectives to program design, project evaluation, and institutional transformation, with an emphasis on clear priorities and measurable progress."
@@ -196,7 +233,13 @@ export const INDUSTRIES: Industry[] = [
     name: "Legal & Professional Services",
     tagline: "Law Firms, Legal Departments & Advisory Practices",
     description: "Modernizing legal operations, knowledge management, client experience, and data-led service delivery for law firms and in-house teams.",
-    image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/page-hero-strategy.jpg",
+    heroImages: [
+      "/images/page-hero-strategy.jpg",
+      "/images/page-hero-city.jpg",
+      "/images/page-hero-team.jpg",
+      "/images/page-hero-technology.jpg",
+    ],
     industryPerspective: [
       "Legal and professional services organizations are adapting to changing client expectations, new technology, competitive pressure, and rising demands around information governance. Improving delivery is not simply a technology question: it involves how work is scoped, staffed, priced, managed, and reviewed.",
       "We work with firms and in-house teams to identify practical opportunities across operations, growth, and digital enablement. Our focus is on strengthening the foundations for consistent service and responsible innovation, while aligning change with the organization’s strategy and risk appetite."
