@@ -76,10 +76,15 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
               Clarity for the challenges shaping {industry.name.toLowerCase()}
             </h2>
           </div>
-          <div className="lg:col-span-7">
-            <p className="text-base sm:text-xl text-dark/70 dark:text-white/70 leading-relaxed">
-              {industry.description}
-            </p>
+          <div className="lg:col-span-7 space-y-5">
+            {industry.industryPerspective.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-base sm:text-lg text-dark/70 dark:text-white/70 leading-relaxed"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </section>
 
@@ -92,17 +97,24 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
               Areas where we help you move forward
             </h2>
           </div>
-          <ul className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
+          <ul className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
             {industry.focusAreas.map((area) => (
               <li
-                key={area}
-                className="flex items-start gap-3 border-b border-dark/10 dark:border-white/10 pb-5"
+                key={area.title}
+                className="flex items-start gap-3 border-t border-dark/10 dark:border-white/10 pt-5"
               >
                 <Icon
                   icon="ph:check-circle-bold"
-                  className="text-primary w-5 h-5 mt-0.5 shrink-0"
+                  className="text-primary w-5 h-5 mt-1 shrink-0"
                 />
-                <span className="text-base sm:text-lg">{area}</span>
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-dark/70 dark:text-white/70 leading-relaxed">
+                    {area.description}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
