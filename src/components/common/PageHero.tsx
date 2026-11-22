@@ -3,13 +3,13 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 interface PageHeroProps {
   eyebrow: string;
   title: string;
   description: string;
-  image: string;
+  images: string[];
   backLink?: {
     href: string;
     label: string;
@@ -23,22 +23,87 @@ export function PageHero({
   eyebrow,
   title,
   description,
-  image,
+  images,
   backLink,
   imageAlt = "",
   titleClassName = "max-w-5xl text-3xl sm:text-5xl md:text-7xl",
   children,
 }: PageHeroProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [previousIndex, setPreviousIndex] = useState<number | null>(null);
+  const [isFading, setIsFading] = useState(false);
+  const activeIndexRef = useRef(0);
+  const imagesRef = useRef(images);
+  imagesRef.current = images;
+
+  useEffect(() => {
+    if (
+      imagesRef.current.length < 2 ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    let fadeTimeout: number | undefined;
+    let fadeFrame: number | undefined;
+
+    const interval = window.setInterval(() => {
+      const currentIndex = activeIndexRef.current;
+      const imageCount = imagesRef.current.length;
+      const nextIndex = Math.floor(Math.random() * (imageCount - 1));
+      const nextIndexWithoutCurrent =
+        nextIndex >= currentIndex ? nextIndex + 1 : nextIndex;
+
+      activeIndexRef.current = nextIndexWithoutCurrent;
+      setPreviousIndex(currentIndex);
+      setIsFading(false);
+      setActiveIndex(nextIndexWithoutCurrent);
+      fadeFrame = window.requestAnimationFrame(() => setIsFading(true));
+
+      if (fadeTimeout !== undefined) {
+        window.clearTimeout(fadeTimeout);
+      }
+      fadeTimeout = window.setTimeout(() => {
+        setPreviousIndex(null);
+        setIsFading(false);
+      }, 1000);
+    }, 3000);
+
+    return () => {
+      window.clearInterval(interval);
+      if (fadeTimeout !== undefined) {
+        window.clearTimeout(fadeTimeout);
+      }
+      if (fadeFrame !== undefined) {
+        window.cancelAnimationFrame(fadeFrame);
+      }
+    };
+  }, []);
+
   return (
     <section className="relative -mt-[72px] min-h-[420px] pt-[72px] sm:-mt-[94px] sm:min-h-[500px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden">
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
+      <div className="absolute inset-0 bg-dark">
+        <Image
+          src={images[activeIndex]}
+          alt={imageAlt}
+          fill
+          loading="eager"
+          className="object-cover"
+          sizes="100vw"
+        />
+        {previousIndex !== null && (
+          <Image
+            src={images[previousIndex]}
+            alt=""
+            fill
+            loading="eager"
+            className={`object-cover transition-opacity duration-1000 motion-reduce:transition-none ${
+              isFading ? "opacity-0" : "opacity-100"
+            }`}
+            sizes="100vw"
+          />
+        )}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
       <div className="container relative z-10 max-w-8xl mx-auto px-5 2xl:px-0 py-14 sm:py-20 text-white">
         {backLink && (
