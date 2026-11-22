@@ -10,7 +10,12 @@ export default function AboutPage() {
         eyebrow="About Arvanto"
         title="Turning Complexity into Opportunity."
         description="Arvanto is a global business transformation & value creation consultancy founded in Africa. We combine strategy, technology, data, and quantitative intelligence to help organizations and businesses make better decisions and achieve measurable results."
-        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=85"
+        images={[
+          "/images/page-hero-team.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-retail.jpg",
+        ]}
       />
 
       {/* Vision & Mission Grid */}
