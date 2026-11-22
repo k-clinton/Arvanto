@@ -58,7 +58,7 @@ export default function IndustriesPage() {
                       {ind.focusAreas.map((area, aIdx) => (
                         <li key={aIdx} className="flex items-center gap-2">
                           <Icon icon="ph:check-bold" className="text-primary w-3.5 h-3.5 shrink-0" />
-                          <span>{area}</span>
+                          <span>{area.title}</span>
                         </li>
                       ))}
                     </ul>
