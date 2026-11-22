@@ -10,7 +10,12 @@ export default function ApproachPage() {
         eyebrow="Arvanto Methodology"
         title="Discover → Diagnose → Quantify → Transform → Scale"
         description="Our disciplined 5-stage transformation framework bridges high level executive strategy with quantitative proof and automated execution."
-        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85"
+        images={[
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-technology.jpg",
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-team.jpg",
+        ]}
       />
 
       {/* 5 Stages Detail */}
