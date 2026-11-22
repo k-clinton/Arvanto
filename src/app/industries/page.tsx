@@ -21,7 +21,7 @@ export default function IndustriesPage() {
         </div>
       </div>
 
-      {/* Grid of 6 Industries */}
+      {/* Industries Grid */}
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {INDUSTRIES.map((ind) => (
@@ -68,10 +68,10 @@ export default function IndustriesPage() {
 
               <div className="p-6 pt-0">
                 <Link
-                  href="/contactus"
+                  href={`/industries/${ind.slug}`}
                   className="w-full text-center py-3 bg-white dark:bg-dark text-dark dark:text-white font-semibold rounded-full border border-dark/10 dark:border-white/10 hover:bg-primary hover:text-white transition duration-300 block text-sm"
                 >
-                  Explore Solutions for {ind.name}
+                  Explore {ind.name}
                 </Link>
               </div>
             </div>
