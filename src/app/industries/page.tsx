@@ -16,7 +16,7 @@ export default function IndustriesPage() {
             Industry Intelligence & Sector Focus
           </h1>
           <p className="text-base md:text-xl text-white/90 dark:text-dark/90 max-w-3xl leading-relaxed">
-            Deep domain expertise across Financial Services, Healthcare, Technology, Energy, Consumer Retail, and the Public Sector.
+            Deep domain expertise across Financial Services, Healthcare, Technology, Energy, Consumer Retail, the Public Sector, and Legal & Professional Services.
           </p>
         </div>
       </div>
