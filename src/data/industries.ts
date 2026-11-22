@@ -5,7 +5,8 @@ export interface Industry {
   tagline: string;
   description: string;
   image: string;
-  focusAreas: string[];
+  industryPerspective: string[];
+  focusAreas: { title: string; description: string }[];
 }
 
 export const INDUSTRIES: Industry[] = [
@@ -16,11 +17,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "Banking, Insurance, Capital Markets & Asset Management",
     description: "Navigating regulatory shifts, modernizing core banking platforms, deploying predictive credit risk models, and launching digital finance initiatives.",
     image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Financial institutions are balancing growth and customer expectations with tighter oversight, changing risk conditions, and pressure to modernize legacy systems. These priorities are connected: a new digital product, for example, affects the operating model, data controls, and risk exposure as well as revenue.",
+      "Arvanto helps leadership teams bring those considerations together. We use strategy, quantitative analysis, and transformation planning to clarify where to invest, how to manage exposure, and how to turn priorities into an executable roadmap."
+    ],
     focusAreas: [
-      "Credit Risk & Pricing Intelligence",
-      "Core Banking & FinTech Transformation",
-      "Actuarial & Solvency II Modelling",
-      "Fraud Anomaly Detection Engines"
+      {
+        title: "Credit Risk & Pricing Intelligence",
+        description: "Use portfolio, customer, and market data to understand risk-adjusted returns, refine pricing decisions, and identify changes in credit quality earlier."
+      },
+      {
+        title: "Core Banking & FinTech Transformation",
+        description: "Assess modernization options, sequence platform and process changes, and develop a practical transition plan that accounts for customers, controls, and operational continuity."
+      },
+      {
+        title: "Actuarial & Solvency II Modelling",
+        description: "Strengthen forecasting and capital planning with scenario analysis, actuarial models, and a clearer view of how assumptions affect resilience and strategic choices."
+      },
+      {
+        title: "Fraud Anomaly Detection Engines",
+        description: "Improve how teams identify unusual activity by shaping data-led detection approaches, prioritizing investigation signals, and embedding insights into day-to-day operations."
+      }
     ]
   },
   {
@@ -30,11 +47,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "Hospitals, Health Systems & Life Science Enterprises",
     description: "Optimizing patient flow, operational efficiency, medical supply chain resilience, and clinical data analytics infrastructure.",
     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Healthcare providers and life sciences organizations must improve access, quality, and affordability while working within complex operating and regulatory environments. Demand patterns, workforce capacity, supply availability, and information systems all influence the ability to deliver reliable services.",
+      "We help teams understand where performance is constrained and identify changes that can be delivered responsibly. Our work connects operational analysis and data strategy with practical implementation, keeping patient outcomes, staff needs, and governance in view."
+    ],
     focusAreas: [
-      "Clinical Process Redesign",
-      "Healthcare Resource Allocation",
-      "Supply Chain & Asset Tracking",
-      "Patient Outcome Analytics"
+      {
+        title: "Clinical Process Redesign",
+        description: "Map patient and staff workflows to identify delays, unnecessary handoffs, and opportunities to improve consistency without losing sight of clinical requirements."
+      },
+      {
+        title: "Healthcare Resource Allocation",
+        description: "Use demand and capacity analysis to support decisions about staffing, facilities, and equipment, helping leaders direct limited resources toward priority needs."
+      },
+      {
+        title: "Supply Chain & Asset Tracking",
+        description: "Review procurement, inventory, and distribution processes to improve visibility, anticipate supply constraints, and support more resilient operations."
+      },
+      {
+        title: "Patient Outcome Analytics",
+        description: "Develop measurement approaches that help teams connect service activity with patient outcomes, identify meaningful patterns, and make evidence-informed improvements."
+      }
     ]
   },
   {
@@ -44,11 +77,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "SaaS Platforms, Telecom Networks & Digital Infrastructure",
     description: "Accelerating ARR expansion, optimizing subscriber retention, modernizing network operations, and structuring strategic technology partnerships.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Technology and telecom businesses operate in fast-moving markets where product economics, customer expectations, infrastructure investment, and competitive positioning shift quickly. Sustainable growth depends on making connected choices about where to compete, what to build, and how to scale delivery.",
+      "Arvanto supports those choices with market and performance analysis, operating model design, and technology transformation planning. We help teams turn customer and operational data into clearer priorities while keeping execution grounded in commercial objectives."
+    ],
     focusAreas: [
-      "Churn Prediction & Customer LTV",
-      "Enterprise SaaS Pricing Strategy",
-      "Network Infrastructure AI",
-      "Digital Platform Scale"
+      {
+        title: "Churn Prediction & Customer LTV",
+        description: "Analyze customer behavior and service patterns to understand retention drivers, segment opportunities, and focus engagement on sustainable customer value."
+      },
+      {
+        title: "Enterprise SaaS Pricing Strategy",
+        description: "Evaluate packaging, willingness-to-pay signals, and unit economics to shape pricing choices that support adoption, retention, and profitable growth."
+      },
+      {
+        title: "Network Infrastructure AI",
+        description: "Identify appropriate opportunities for analytics and AI across network planning and operations, with attention to data readiness, governance, and adoption."
+      },
+      {
+        title: "Digital Platform Scale",
+        description: "Plan the capabilities, operating processes, and investment priorities needed to grow digital platforms while maintaining a consistent customer experience."
+      }
     ]
   },
   {
@@ -58,11 +107,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "Utilities, Renewable Energy, Logistics & Heavy Industry",
     description: "Balancing capital intensive assets with grid modernizations, operational efficiency, renewable energy transitions, and ESG risk compliance.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Energy and infrastructure organizations make long-horizon decisions in capital-intensive environments. Asset reliability, policy and market changes, financing constraints, and the transition to lower-carbon systems can all affect project viability and long-term performance.",
+      "We help leaders compare options, assess uncertainty, and prioritize investment and operational improvements. Our approach brings financial and scenario analysis together with execution planning, so strategic ambitions can be translated into measurable initiatives."
+    ],
     focusAreas: [
-      "Capital Asset Optimization",
-      "Predictive Equipment Maintenance",
-      "Renewable Transition Feasibility",
-      "Supply Chain & Logistics"
+      {
+        title: "Capital Asset Optimization",
+        description: "Assess asset performance and investment choices to support decisions on maintenance, utilization, replacement, and capital allocation across portfolios."
+      },
+      {
+        title: "Predictive Equipment Maintenance",
+        description: "Explore how condition and operational data can inform maintenance planning, reduce avoidable disruption, and improve the basis for asset lifecycle decisions."
+      },
+      {
+        title: "Renewable Transition Feasibility",
+        description: "Evaluate transition pathways using commercial, operational, and scenario considerations to understand feasibility, dependencies, and implementation priorities."
+      },
+      {
+        title: "Supply Chain & Logistics",
+        description: "Identify bottlenecks and resilience gaps across sourcing, transport, and distribution, then prioritize improvements to cost, visibility, and continuity."
+      }
     ]
   },
   {
@@ -72,11 +137,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "FMCG, E-Commerce, Multi-unit Retail & Logistics",
     description: "Aligning omni-channel fulfillment, dynamic pricing intelligence, demand forecasting, and inventory optimization across East Africa and beyond.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Consumer and retail businesses respond to changing preferences, price sensitivity, channel shifts, and uneven demand. These pressures make it difficult to balance availability and customer experience against inventory costs, margin targets, and complex fulfillment operations.",
+      "We help organizations use market and operational evidence to make more coordinated commercial decisions. From demand planning to channel strategy, we focus on practical changes that improve visibility and connect customer priorities to how the business operates."
+    ],
     focusAreas: [
-      "Demand Forecasting & Replenishment",
-      "Dynamic Pricing Intelligence",
-      "Customer Cohort Retention",
-      "Retail Footprint Optimization"
+      {
+        title: "Demand Forecasting & Replenishment",
+        description: "Improve the planning process by bringing sales patterns, seasonality, and supply constraints into clearer forecasts and replenishment decisions."
+      },
+      {
+        title: "Dynamic Pricing Intelligence",
+        description: "Combine market, product, and customer signals to assess pricing opportunities and understand the potential trade-offs between volume, margin, and loyalty."
+      },
+      {
+        title: "Customer Cohort Retention",
+        description: "Explore how customer groups behave over time to identify retention patterns, evaluate engagement opportunities, and guide more relevant customer strategies."
+      },
+      {
+        title: "Retail Footprint Optimization",
+        description: "Assess store and channel performance alongside location and operating costs to inform decisions on expansion, format, and network productivity."
+      }
     ]
   },
   {
@@ -86,11 +167,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "Government Agencies, Development Financial Institutions & NGOs",
     description: "Enabling public policy execution, revenue collection optimization, infrastructure project evaluation, and national digital infrastructure transformation.",
     image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Public institutions and development organizations work to deliver lasting outcomes amid competing needs, limited resources, and complex stakeholder environments. Strong policy intent must be matched by sound delivery models, reliable evidence, and transparent use of funds.",
+      "Arvanto helps teams strengthen the link between strategy, investment, and implementation. We bring analytical and operational perspectives to program design, project evaluation, and institutional transformation, with an emphasis on clear priorities and measurable progress."
+    ],
     focusAreas: [
-      "Economic Impact Quantification",
-      "Revenue Digitization & Integrity",
-      "Infrastructure Project Appraisal",
-      "Public Service Optimization"
+      {
+        title: "Economic Impact Quantification",
+        description: "Define outcome measures and analytical approaches that help decision-makers understand the expected economic and social effects of policies and programs."
+      },
+      {
+        title: "Revenue Digitization & Integrity",
+        description: "Review revenue processes and digital opportunities to improve traceability, service accessibility, and the quality of information used for oversight."
+      },
+      {
+        title: "Infrastructure Project Appraisal",
+        description: "Compare project options, assumptions, risks, and delivery requirements to support more robust investment decisions and implementation planning."
+      },
+      {
+        title: "Public Service Optimization",
+        description: "Map service journeys and operating constraints to identify ways to improve responsiveness, reduce friction, and make better use of public resources."
+      }
     ]
   },
   {
@@ -100,11 +197,27 @@ export const INDUSTRIES: Industry[] = [
     tagline: "Law Firms, Legal Departments & Advisory Practices",
     description: "Modernizing legal operations, knowledge management, client experience, and data-led service delivery for law firms and in-house teams.",
     image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=800&q=80",
+    industryPerspective: [
+      "Legal and professional services organizations are adapting to changing client expectations, new technology, competitive pressure, and rising demands around information governance. Improving delivery is not simply a technology question: it involves how work is scoped, staffed, priced, managed, and reviewed.",
+      "We work with firms and in-house teams to identify practical opportunities across operations, growth, and digital enablement. Our focus is on strengthening the foundations for consistent service and responsible innovation, while aligning change with the organization’s strategy and risk appetite."
+    ],
     focusAreas: [
-      "Legal Process Transformation",
-      "Knowledge & Matter Management",
-      "Client Experience & Growth",
-      "AI & Governance for Legal Teams"
+      {
+        title: "Legal Process Transformation",
+        description: "Map matter and support workflows to identify repetitive effort, unclear handoffs, and opportunities to improve consistency, capacity, and service delivery."
+      },
+      {
+        title: "Knowledge & Matter Management",
+        description: "Improve how teams organize and access matter, precedent, and operational knowledge, with clear attention to information quality, permissions, and governance."
+      },
+      {
+        title: "Client Experience & Growth",
+        description: "Use client feedback, service patterns, and commercial analysis to identify ways to strengthen relationships, clarify value, and support sustainable practice growth."
+      },
+      {
+        title: "AI & Governance for Legal Teams",
+        description: "Assess appropriate AI use cases and establish practical guardrails for confidentiality, oversight, quality review, and responsible adoption across legal work."
+      }
     ]
   }
 ];
