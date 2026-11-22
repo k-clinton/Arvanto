@@ -92,5 +92,19 @@ export const INDUSTRIES: Industry[] = [
       "Infrastructure Project Appraisal",
       "Public Service Optimization"
     ]
+  },
+  {
+    id: "legal-professional-services",
+    slug: "legal-professional-services",
+    name: "Legal & Professional Services",
+    tagline: "Law Firms, Legal Departments & Advisory Practices",
+    description: "Modernizing legal operations, knowledge management, client experience, and data-led service delivery for law firms and in-house teams.",
+    image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=800&q=80",
+    focusAreas: [
+      "Legal Process Transformation",
+      "Knowledge & Matter Management",
+      "Client Experience & Growth",
+      "AI & Governance for Legal Teams"
+    ]
   }
 ];
