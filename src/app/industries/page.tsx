@@ -11,7 +11,13 @@ export default function IndustriesPage() {
         eyebrow="Priority Sectors"
         title="Industry Intelligence & Sector Focus"
         description="Deep domain expertise across Financial Services, Healthcare, Technology, Energy, Consumer Retail, the Public Sector, and Legal & Professional Services."
-        image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85"
+        images={[
+          "/images/page-hero-energy.jpg",
+          "/images/page-hero-finance.jpg",
+          "/images/page-hero-retail.jpg",
+          "/images/page-hero-healthcare.jpg",
+          "/images/page-hero-technology.jpg",
+        ]}
       />
 
       {/* Industries Grid */}
