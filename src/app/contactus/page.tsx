@@ -18,7 +18,12 @@ export default function ContactUsPage() {
         eyebrow="Contact Arvanto"
         title="Start a Conversation."
         description="Discuss your enterprise challenge, schedule an executive briefing, or explore strategic advisory partnerships with Arvanto."
-        image="/images/heroBanner.png"
+        images={[
+          "/images/page-hero-team.jpg",
+          "/images/page-hero-city.jpg",
+          "/images/page-hero-strategy.jpg",
+          "/images/page-hero-healthcare.jpg",
+        ]}
       />
 
       {/* Main Grid */}
