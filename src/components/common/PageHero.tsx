@@ -126,7 +126,7 @@ export function PageHero({
   return (
     <section
       ref={heroRef}
-      className="relative -mt-[72px] min-h-[380px] pt-[72px] sm:-mt-[94px] sm:min-h-[460px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden"
+      className="relative -mt-[72px] min-h-[340px] pt-[72px] sm:-mt-[94px] sm:min-h-[420px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden bg-dark">
         <div
@@ -154,7 +154,7 @@ export function PageHero({
         )}
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
-      <div className="container relative z-10 max-w-8xl mx-auto px-5 2xl:px-0 py-14 sm:py-20 text-white">
+      <div className="container relative z-10 max-w-8xl mx-auto px-5 2xl:px-0 py-10 sm:py-16 text-white">
         {backLink && (
           <Link
             href={backLink.href}
