@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
@@ -31,6 +30,7 @@ export function PageHero({
 }: PageHeroProps) {
   const heroRef = useRef<HTMLElement>(null);
   const imageLayerRef = useRef<HTMLDivElement>(null);
+  const previousImageLayerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [isFading, setIsFading] = useState(false);
@@ -55,7 +55,11 @@ export function PageHero({
       frame = undefined;
       const scrolledDistance = initialTop - hero.getBoundingClientRect().top;
       const offset = Math.min(Math.max(scrolledDistance * 0.25, 0), 64);
-      imageLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
+      const backgroundPosition = `center calc(50% + ${offset}px)`;
+      imageLayer.style.backgroundPosition = backgroundPosition;
+      if (previousImageLayerRef.current) {
+        previousImageLayerRef.current.style.backgroundPosition = backgroundPosition;
+      }
     };
 
     const handleScroll = () => {
@@ -127,29 +131,27 @@ export function PageHero({
       <div className="absolute inset-0 overflow-hidden bg-dark">
         <div
           ref={imageLayerRef}
-          className="absolute inset-0 scale-[1.32] will-change-transform motion-reduce:scale-100"
-        >
-          <Image
-            src={images[activeIndex]}
-            alt={imageAlt}
-            fill
-            loading="eager"
-            className="object-cover"
-            sizes="100vw"
+          role={imageAlt ? "img" : undefined}
+          aria-label={imageAlt || undefined}
+          className="absolute inset-0 bg-cover bg-center bg-fixed motion-reduce:bg-scroll"
+          style={{
+            backgroundImage: `url("${images[activeIndex]}")`,
+            backgroundPosition: "center center",
+          }}
+        />
+        {previousIndex !== null && (
+          <div
+            ref={previousImageLayerRef}
+            aria-hidden="true"
+            className={`absolute inset-0 bg-cover bg-center bg-fixed transition-opacity duration-1000 motion-reduce:bg-scroll motion-reduce:transition-none ${
+              isFading ? "opacity-0" : "opacity-100"
+            }`}
+            style={{
+              backgroundImage: `url("${images[previousIndex]}")`,
+              backgroundPosition: "center center",
+            }}
           />
-          {previousIndex !== null && (
-            <Image
-              src={images[previousIndex]}
-              alt=""
-              fill
-              loading="eager"
-              className={`object-cover transition-opacity duration-1000 motion-reduce:transition-none ${
-                isFading ? "opacity-0" : "opacity-100"
-              }`}
-              sizes="100vw"
-            />
-          )}
-        </div>
+        )}
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
       <div className="container relative z-10 max-w-8xl mx-auto px-5 2xl:px-0 py-14 sm:py-20 text-white">
