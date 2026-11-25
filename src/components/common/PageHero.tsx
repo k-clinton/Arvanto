@@ -29,12 +29,51 @@ export function PageHero({
   titleClassName = "max-w-5xl text-3xl sm:text-5xl md:text-7xl",
   children,
 }: PageHeroProps) {
+  const heroRef = useRef<HTMLElement>(null);
+  const imageLayerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [isFading, setIsFading] = useState(false);
   const activeIndexRef = useRef(0);
   const imagesRef = useRef(images);
   imagesRef.current = images;
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    const imageLayer = imageLayerRef.current;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (!hero || !imageLayer || prefersReducedMotion) {
+      return;
+    }
+
+    const initialTop = hero.getBoundingClientRect().top;
+    let frame: number | undefined;
+
+    const updatePosition = () => {
+      frame = undefined;
+      const scrolledDistance = initialTop - hero.getBoundingClientRect().top;
+      const offset = Math.min(Math.max(scrolledDistance * 0.25, 0), 64);
+      imageLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
+    };
+
+    const handleScroll = () => {
+      if (frame === undefined) {
+        frame = window.requestAnimationFrame(updatePosition);
+      }
+    };
+
+    updatePosition();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frame !== undefined) {
+        window.cancelAnimationFrame(frame);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (
@@ -81,28 +120,36 @@ export function PageHero({
   }, []);
 
   return (
-    <section className="relative -mt-[72px] min-h-[420px] pt-[72px] sm:-mt-[94px] sm:min-h-[500px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden">
-      <div className="absolute inset-0 bg-dark">
-        <Image
-          src={images[activeIndex]}
-          alt={imageAlt}
-          fill
-          loading="eager"
-          className="object-cover"
-          sizes="100vw"
-        />
-        {previousIndex !== null && (
+    <section
+      ref={heroRef}
+      className="relative -mt-[72px] min-h-[420px] pt-[72px] sm:-mt-[94px] sm:min-h-[500px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden"
+    >
+      <div className="absolute inset-0 overflow-hidden bg-dark">
+        <div
+          ref={imageLayerRef}
+          className="absolute inset-0 scale-[1.32] will-change-transform motion-reduce:scale-100"
+        >
           <Image
-            src={images[previousIndex]}
-            alt=""
+            src={images[activeIndex]}
+            alt={imageAlt}
             fill
             loading="eager"
-            className={`object-cover transition-opacity duration-1000 motion-reduce:transition-none ${
-              isFading ? "opacity-0" : "opacity-100"
-            }`}
+            className="object-cover"
             sizes="100vw"
           />
-        )}
+          {previousIndex !== null && (
+            <Image
+              src={images[previousIndex]}
+              alt=""
+              fill
+              loading="eager"
+              className={`object-cover transition-opacity duration-1000 motion-reduce:transition-none ${
+                isFading ? "opacity-0" : "opacity-100"
+              }`}
+              sizes="100vw"
+            />
+          )}
+        </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
       <div className="container relative z-10 max-w-8xl mx-auto px-5 2xl:px-0 py-14 sm:py-20 text-white">
