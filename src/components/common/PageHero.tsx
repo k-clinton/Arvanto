@@ -126,7 +126,7 @@ export function PageHero({
   return (
     <section
       ref={heroRef}
-      className="relative -mt-[72px] min-h-[420px] pt-[72px] sm:-mt-[94px] sm:min-h-[500px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden"
+      className="relative -mt-[72px] min-h-[380px] pt-[72px] sm:-mt-[94px] sm:min-h-[460px] sm:pt-[94px] lg:-mt-[104px] lg:pt-[104px] flex items-end overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden bg-dark">
         <div
