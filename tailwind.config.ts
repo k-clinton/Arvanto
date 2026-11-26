@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         primary: "#07be8a",
         dark: "#0B0F17",
+        page: "#e8effa",
         skyblue: "#0284c7",
         lightskyblue: "#0369a1",
       },
