@@ -328,26 +328,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-finance.jpg",
     ],
     industryPerspective: [
-      "Public institutions and development organizations work to deliver lasting outcomes amid competing needs, limited resources, and complex stakeholder environments. Strong policy intent must be matched by sound delivery models, reliable evidence, and transparent use of funds.",
-      "Arvanto helps teams strengthen the link between strategy, investment, and implementation. We bring analytical and operational perspectives to program design, project evaluation, and institutional transformation, with an emphasis on clear priorities and measurable progress."
+      "Public sector institutions and development organisations operate under intense scrutiny and significant constraint. They are expected to deliver better services, strengthen domestic revenue mobilisation, evaluate and structure major infrastructure investments, and modernise digital and institutional capabilities — often with limited resources and complex political and institutional realities.",
+      "Arvanto works with government ministries and agencies, development finance institutions, and international organisations on initiatives that improve policy execution, revenue integrity, infrastructure appraisal, and public service performance. We bring private-sector analytical discipline and transformation experience into public sector contexts, helping clients design solutions that are both technically sound and institutionally feasible.",
+      "In African and other emerging markets, the quality of public institutions and infrastructure remains a critical determinant of economic and social progress. Arvanto supports clients in these environments with advisory that combines international good practice with deep contextual understanding."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Economic Impact Quantification",
+        title: "Economic Impact Quantification, Policy Appraisal & Investment Analysis",
         description: "Define outcome measures and analytical approaches that help decision-makers understand the expected economic and social effects of policies and programs."
       },
       {
-        title: "Revenue Digitization & Integrity",
+        title: "Revenue Digitization, Tax Administration Strengthening & Integrity Systems",
         description: "Review revenue processes and digital opportunities to improve traceability, service accessibility, and the quality of information used for oversight."
       },
       {
-        title: "Infrastructure Project Appraisal",
+        title: "Infrastructure Project Appraisal, Structuring & Public-Private Partnership Advisory",
         description: "Compare project options, assumptions, risks, and delivery requirements to support more robust investment decisions and implementation planning."
       },
       {
-        title: "Public Service Optimization",
+        title: "Public Service Design, Operational Excellence & Digital Government Transformation",
         description: "Map service journeys and operating constraints to identify ways to improve responsiveness, reduce friction, and make better use of public resources."
       }
+    ],
+    closingPerspective: [
+      "We place particular emphasis on implementation realism — ensuring that strategies and designs can actually be executed within the institutional, capacity and political constraints that public sector leaders face."
     ]
   },
   {
