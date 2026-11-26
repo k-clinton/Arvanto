@@ -17,7 +17,7 @@ export default async function InsightDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
       <PageHero
         backLink={{ href: "/insights", label: "Back to Insights" }}
         eyebrow={article.category}

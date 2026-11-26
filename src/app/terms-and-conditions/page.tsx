@@ -13,7 +13,7 @@ export default function TermsAndConditionsPage() {
   const lastUpdated = "September 15, 2026";
 
   return (
-    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
       <PageHero
         eyebrow="Legal & Compliance"
         title="Terms & Conditions"
