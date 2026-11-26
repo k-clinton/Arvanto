@@ -65,19 +65,34 @@ export function HeroSection() {
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden bg-page-dark text-white">
       <div aria-hidden="true" className="absolute inset-0">
-        {HERO_SLIDES.map((slide, index) => (
-          <Image
-            key={slide.image}
-            src={slide.image}
-            alt=""
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className={`object-cover transition-opacity duration-1000 ease-in-out ${
-              index === activeIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+        {HERO_SLIDES.map((slide, index) => {
+          const direction = index % 2 === 0 ? "left" : "right";
+          const isActive = index === activeIndex;
+
+          return (
+            <Image
+              key={slide.image}
+              src={slide.image}
+              alt=""
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className={`object-cover transition-opacity duration-1000 ease-in-out hero-image-pan-${direction} ${
+                isActive
+                  ? `opacity-100 hero-image-ken-burns-${direction}`
+                  : "opacity-0"
+              }`}
+              style={
+                isActive
+                  ? {
+                      animationDuration: `${SLIDE_DURATION_MS}ms`,
+                      animationPlayState: isPaused ? "paused" : "running",
+                    }
+                  : undefined
+              }
+            />
+          );
+        })}
         <div className="absolute inset-y-0 left-0 w-full max-w-[42rem] bg-gradient-to-r from-page-dark/45 via-page-dark/15 to-transparent" />
       </div>
 
