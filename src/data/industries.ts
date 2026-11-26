@@ -227,6 +227,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Consumer & Retail",
     tagline: "FMCG, E-Commerce, Multi-unit Retail & Logistics",
     description: "Aligning omni-channel fulfillment, dynamic pricing intelligence, demand forecasting, and inventory optimization across East Africa and beyond.",
+    listingContent: {
+      subheading: "Consumer, Retail & Omnichannel Strategy Consulting",
+      paragraphs: [
+        "Consumer goods companies and retailers face intense pressure to respond faster to shifting demand patterns, optimize inventory and pricing in real time, deliver seamless omnichannel experiences, and improve profitability in an environment of rising costs and heightened competition. Success increasingly depends on the intelligent use of data across demand sensing, pricing, assortment, and fulfillment.",
+        "Arvanto partners with FMCG manufacturers, e-commerce platforms, multi-unit retail groups, and distribution businesses to build more responsive, data-driven, and profitable commercial and operating models—particularly across East African and other high-growth markets.",
+      ],
+      expertise: [
+        "Demand Forecasting, Intelligent Replenishment & Inventory Optimization",
+        "Dynamic Pricing Strategy, Promotion Effectiveness & Margin Management",
+        "Customer Cohort Analysis, Loyalty Programmes & Retention Intelligence",
+        "Retail Network Design, Store Footprint Optimization & Omnichannel Fulfillment",
+      ],
+      closingParagraph:
+        "Our consumer and retail practice integrates commercial strategy, advanced analytics, supply chain expertise, and transformation capabilities to help clients grow revenue while improving operational efficiency and customer experience.",
+    },
     image: "/images/page-hero-retail.jpg",
     heroImages: [
       "/images/page-hero-retail.jpg",
