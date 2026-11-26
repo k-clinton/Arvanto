@@ -21,16 +21,37 @@ export default function IndustriesPage() {
       />
 
       <section className="container max-w-8xl mx-auto px-5 2xl:px-0 py-12 sm:py-20">
-        <div className="flex flex-col gap-3 border-b border-dark/15 dark:border-white/15 pb-8 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="grid gap-3 border-b border-dark/15 pb-8 dark:border-white/15 sm:grid-cols-12 sm:items-end sm:gap-8">
+          <div className="sm:col-span-9">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
               A field guide
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               Where deep context makes the difference.
             </h2>
+            <div className="mt-5 space-y-4 text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
+              <p>
+                In today’s environment of regulatory pressure, technological
+                disruption, capital intensity, and shifting customer
+                expectations, surface-level recommendations are no longer
+                sufficient. Sustainable performance improvement demands
+                genuine industry expertise—an intimate understanding of value
+                chains, competitive structures, risk profiles, data ecosystems,
+                and operational realities.
+              </p>
+              <p>
+                Arvanto brings precisely that depth. Our teams combine strategic
+                consulting experience with hands-on knowledge of how Financial
+                Services institutions, healthcare systems, technology
+                platforms, energy companies, retail groups, public institutions,
+                and professional service firms actually operate. This allows us
+                to design transformation programmes that are not only
+                analytically rigorous but also commercially realistic and
+                executable.
+              </p>
+            </div>
           </div>
-          <p className="text-sm font-medium uppercase tracking-widest text-dark/50 dark:text-white/50">
+          <p className="text-sm font-medium uppercase tracking-widest text-dark/50 dark:text-white/50 sm:col-span-3 sm:text-right">
             {String(INDUSTRIES.length).padStart(2, "0")} sectors
           </p>
         </div>
@@ -43,7 +64,7 @@ export default function IndustriesPage() {
             >
               <Link
                 href={`/industries/${ind.slug}`}
-                className={`group relative block h-56 cursor-pointer overflow-hidden sm:h-72 md:col-span-5 md:h-full md:max-h-[32rem] md:min-h-72 md:self-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+                className={`group relative block h-56 cursor-pointer overflow-hidden rounded-lg sm:h-72 md:col-span-6 md:h-full md:max-h-[32rem] md:min-h-72 md:self-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                   index % 2 === 1 ? "md:order-2" : ""
                 }`}
               >
@@ -78,7 +99,7 @@ export default function IndustriesPage() {
               </Link>
 
               <div
-                className={`space-y-4 md:col-span-7 ${
+                className={`space-y-4 md:col-span-6 ${
                   index % 2 === 1 ? "md:order-1" : ""
                 }`}
               >
