@@ -15,7 +15,7 @@ export function MethodologyFAQ() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-page dark:bg-black" id="faqs">
+    <section className="py-16 sm:py-24 bg-page dark:bg-page-dark" id="faqs">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Sticky image on the left */}
