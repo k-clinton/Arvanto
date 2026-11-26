@@ -160,26 +160,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-finance.jpg",
     ],
     industryPerspective: [
-      "Technology and telecom businesses operate in fast-moving markets where product economics, customer expectations, infrastructure investment, and competitive positioning shift quickly. Sustainable growth depends on making connected choices about where to compete, what to build, and how to scale delivery.",
-      "Arvanto supports those choices with market and performance analysis, operating model design, and technology transformation planning. We help teams turn customer and operational data into clearer priorities while keeping execution grounded in commercial objectives."
+      "Technology and telecommunications companies operate in markets defined by rapid innovation, intense competition, and the constant need to balance growth with profitability and operational reliability. Customer acquisition costs are rising, churn remains a persistent challenge, pricing power is under pressure, and the technical and organisational complexity of scaling platforms continues to increase.",
+      "Arvanto partners with SaaS businesses, telecom operators, digital platforms, and infrastructure providers to address these challenges with a combination of growth strategy, advanced analytics, product and pricing expertise, and large-scale transformation capability. We help clients improve customer lifetime value, reduce churn through predictive intelligence, design more effective monetisation models, optimise network and platform operations, and build the organisational and technical foundations required for sustainable scale.",
+      "In high-growth markets across Africa and the Middle East, technology and telecom companies face additional opportunities and constraints — expanding digital inclusion, managing infrastructure investment, navigating regulatory environments, and competing with both global and local players."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Churn Prediction & Customer LTV",
+        title: "Churn Prediction, Customer Lifetime Value & Retention",
         description: "Analyze customer behavior and service patterns to understand retention drivers, segment opportunities, and focus engagement on sustainable customer value."
       },
       {
-        title: "Enterprise SaaS Pricing Strategy",
+        title: "Enterprise SaaS Pricing & Monetisation Strategy",
         description: "Evaluate packaging, willingness-to-pay signals, and unit economics to shape pricing choices that support adoption, retention, and profitable growth."
       },
       {
-        title: "Network Infrastructure AI",
+        title: "Network Operations Optimisation & Infrastructure AI",
         description: "Identify appropriate opportunities for analytics and AI across network planning and operations, with attention to data readiness, governance, and adoption."
       },
       {
-        title: "Digital Platform Scale",
+        title: "Digital Platform Scaling & Ecosystem Design",
         description: "Plan the capabilities, operating processes, and investment priorities needed to grow digital platforms while maintaining a consistent customer experience."
       }
+    ],
+    closingPerspective: [
+      "The goal is always the same: clearer growth pathways, stronger unit economics, and more resilient operating models."
     ]
   },
   {
@@ -211,26 +216,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-finance.jpg",
     ],
     industryPerspective: [
-      "Energy and infrastructure organizations make long-horizon decisions in capital-intensive environments. Asset reliability, policy and market changes, financing constraints, and the transition to lower-carbon systems can all affect project viability and long-term performance.",
-      "We help leaders compare options, assess uncertainty, and prioritize investment and operational improvements. Our approach brings financial and scenario analysis together with execution planning, so strategic ambitions can be translated into measurable initiatives."
+      "Energy and infrastructure organisations manage some of the most capital-intensive and operationally complex asset bases in the economy. They must simultaneously deliver reliable service, optimise existing assets, invest in new capacity, navigate regulatory and climate-related pressures, and adapt to the structural shift toward lower-carbon energy systems.",
+      "Arvanto works with utilities, independent power producers, renewable energy companies, logistics and transport operators, and heavy industrial businesses to strengthen both strategic and operational performance. We help clients improve the productivity of existing assets, design and evaluate renewable and conventional energy investments, build more resilient supply chains, and embed climate and ESG considerations into decision-making processes.",
+      "In African and Middle Eastern markets, energy and infrastructure development remains a critical national priority. Arvanto supports both public and private sector clients in these regions with practical advisory that balances ambition with commercial and operational realism."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Capital Asset Optimization",
+        title: "Capital Asset Performance Optimisation & Portfolio Strategy",
         description: "Assess asset performance and investment choices to support decisions on maintenance, utilization, replacement, and capital allocation across portfolios."
       },
       {
-        title: "Predictive Equipment Maintenance",
+        title: "Predictive Maintenance, Reliability Engineering & Operational Excellence",
         description: "Explore how condition and operational data can inform maintenance planning, reduce avoidable disruption, and improve the basis for asset lifecycle decisions."
       },
       {
-        title: "Renewable Transition Feasibility",
+        title: "Renewable Energy Transition Strategy & Investment Structuring",
         description: "Evaluate transition pathways using commercial, operational, and scenario considerations to understand feasibility, dependencies, and implementation priorities."
       },
       {
-        title: "Supply Chain & Logistics",
+        title: "Supply Chain, Logistics Optimisation & Infrastructure Resilience",
         description: "Identify bottlenecks and resilience gaps across sourcing, transport, and distribution, then prioritize improvements to cost, visibility, and continuity."
       }
+    ],
+    closingPerspective: [
+      "Whether the focus is improving the performance of existing generation or distribution assets, structuring new renewable projects, or strengthening critical logistics networks, we help leaders make better decisions and execute them more effectively."
     ]
   },
   {
