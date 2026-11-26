@@ -18,11 +18,11 @@ const HERO_SLIDES = [
   },
   {
     image: "/images/home-hero-2.jpg",
-    eyebrow: "Partnership & Value Creation",
-    headline: "Build stronger relationships,",
-    highlight: "and turn good ideas into lasting results.",
+    eyebrow: "STRATEGY & VALUE CREATION",
+    headline: "From ambition to measurable impact.",
+    highlight: "We turn good ideas into lasting results.",
     description:
-      "Bring your teams and ambitions together around a shared path forward.",
+      "We partner with boards and executive teams to design sharper strategies, deploy intelligent systems, and drive transformation that delivers quantifiable results.",
   },
   {
     image: "/images/home-hero-3.jpg",
