@@ -8,6 +8,8 @@ export interface Industry {
   heroImages: string[];
   industryPerspective: string[];
   focusAreas: { title: string; description: string }[];
+  numberedFocusAreas?: boolean;
+  closingPerspective?: string[];
   listingContent?: {
     subheading: string;
     paragraphs: string[];
@@ -352,26 +354,32 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-technology.jpg",
     ],
     industryPerspective: [
-      "Legal and professional services organizations are adapting to changing client expectations, new technology, competitive pressure, and rising demands around information governance. Improving delivery is not simply a technology question: it involves how work is scoped, staffed, priced, managed, and reviewed.",
-      "We work with firms and in-house teams to identify practical opportunities across operations, growth, and digital enablement. Our focus is on strengthening the foundations for consistent service and responsible innovation, while aligning change with the organization’s strategy and risk appetite."
+      "Law firms and corporate legal teams are under increasing pressure to deliver more strategic value while managing rising client expectations, regulatory complexity, cost pressures and the rapid emergence of new technologies. Clients no longer want purely reactive legal support. They expect commercial insight, efficiency, predictability, strong governance, and the intelligent use of data and technology — without any compromise on quality or professional standards.",
+      "This shift is particularly visible across African markets, where legal teams regularly advise on complex infrastructure and energy projects, cross-border corporate transactions, banking and financial services matters, data protection and technology arrangements, and sophisticated dispute resolution. At the same time, these organisations themselves must modernise how they operate: how they manage knowledge, price and deliver services, protect data, govern the use of artificial intelligence, and create distinctive client experiences.",
+      "Arvanto partners with law firms, in-house legal departments and professional services organisations to address these dual challenges. We help legal leaders redesign operating models, strengthen knowledge and matter management systems, improve pricing and client experience, build robust data protection and technology governance frameworks, and adopt AI in a controlled, ethical and value-creating way."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Legal Process Transformation",
+        title: "Legal Process & Workflow Transformation",
         description: "Map matter and support workflows to identify repetitive effort, unclear handoffs, and opportunities to improve consistency, capacity, and service delivery."
       },
       {
-        title: "Knowledge & Matter Management",
+        title: "Knowledge, Matter & Precedent Management",
         description: "Improve how teams organize and access matter, precedent, and operational knowledge, with clear attention to information quality, permissions, and governance."
       },
       {
-        title: "Client Experience & Growth",
+        title: "Client Experience, Pricing & Growth",
         description: "Use client feedback, service patterns, and commercial analysis to identify ways to strengthen relationships, clarify value, and support sustainable practice growth."
       },
       {
-        title: "AI & Governance for Legal Teams",
+        title: "Data Protection, AI & Technology Governance",
         description: "Assess appropriate AI use cases and establish practical guardrails for confidentiality, oversight, quality review, and responsible adoption across legal work."
       }
+    ],
+    closingPerspective: [
+      "Whether supporting a growing firm seeking to professionalise its operations, a larger practice looking to leverage knowledge systems and AI at scale, or an in-house team aiming to become a more strategic business partner, Arvanto brings structured transformation capability grounded in the realities of legal service delivery.",
+      "The legal organisations that will thrive in the coming years are those that combine outstanding technical expertise with superior operational capability, knowledge leverage and responsible technology adoption."
     ]
   }
 ];
