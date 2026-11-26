@@ -272,26 +272,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-city.jpg",
     ],
     industryPerspective: [
-      "Consumer and retail businesses respond to changing preferences, price sensitivity, channel shifts, and uneven demand. These pressures make it difficult to balance availability and customer experience against inventory costs, margin targets, and complex fulfillment operations.",
-      "We help organizations use market and operational evidence to make more coordinated commercial decisions. From demand planning to channel strategy, we focus on practical changes that improve visibility and connect customer priorities to how the business operates."
+      "Consumer goods and retail organisations face relentless pressure on both the demand and supply sides of their businesses. Customer expectations continue to rise, competition is intense, input costs are volatile, and the complexity of managing omnichannel operations has increased dramatically. Success increasingly depends on the ability to sense demand accurately, price dynamically, optimise inventory and assortment, and deliver seamless experiences across physical and digital channels.",
+      "Arvanto partners with FMCG manufacturers, multi-unit retailers, e-commerce platforms, and distribution businesses to build more intelligent, responsive and profitable commercial and operating models. We help clients strengthen demand forecasting and replenishment processes, design more effective pricing and promotion strategies, improve customer cohort and loyalty performance, and optimise retail networks and fulfilment systems.",
+      "Particular attention is given to the realities of operating in high-growth African and Middle Eastern markets, where infrastructure constraints, informal retail channels, and rapid digital adoption create both challenges and distinctive opportunities."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Demand Forecasting & Replenishment",
+        title: "Demand Forecasting, Intelligent Replenishment & Inventory Optimisation",
         description: "Improve the planning process by bringing sales patterns, seasonality, and supply constraints into clearer forecasts and replenishment decisions."
       },
       {
-        title: "Dynamic Pricing Intelligence",
+        title: "Dynamic Pricing Strategy, Promotion Effectiveness & Margin Management",
         description: "Combine market, product, and customer signals to assess pricing opportunities and understand the potential trade-offs between volume, margin, and loyalty."
       },
       {
-        title: "Customer Cohort Retention",
+        title: "Customer Cohort Analysis, Loyalty Programmes & Retention Intelligence",
         description: "Explore how customer groups behave over time to identify retention patterns, evaluate engagement opportunities, and guide more relevant customer strategies."
       },
       {
-        title: "Retail Footprint Optimization",
+        title: "Retail Network Design, Store Footprint Optimisation & Omnichannel Fulfilment",
         description: "Assess store and channel performance alongside location and operating costs to inform decisions on expansion, format, and network productivity."
       }
+    ],
+    closingPerspective: [
+      "The result is a more coherent commercial and operational system — one that responds faster to market signals, wastes less, serves customers better, and protects margins in an increasingly competitive environment."
     ]
   },
   {
