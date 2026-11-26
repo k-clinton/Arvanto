@@ -38,7 +38,7 @@ const HERO_SLIDES = [
     headline: "Clearer strategy.Smarter decisions.",
     highlight: "Stronger results.",
     description:
-      "Align people, platforms, and processes around your next opportunity.",
+      "We help organisations turn strategic ambition into practical execution through integrated strategy, data intelligence, and AI-powered transformation.",
   },
 ] as const;
 
