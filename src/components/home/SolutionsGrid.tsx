@@ -86,7 +86,7 @@ const SOLUTIONS: SolutionItem[] = [
 
 export function SolutionsGrid() {
   return (
-    <section className="py-16 sm:py-20 bg-page dark:bg-black">
+    <section className="py-16 sm:py-20 bg-page dark:bg-page-dark">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         {/* Section Header */}
         <div className="mb-10 sm:mb-16 flex flex-col gap-3">
