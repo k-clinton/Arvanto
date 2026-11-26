@@ -30,5 +30,14 @@ Arvanto is a strategy, intelligence, and transformation consultancy helping orga
 - Ventures: https://arvanto.com/ventures
 - Contact: https://arvanto.com/contactus
 
+## Industry Sub-Pages
+- Financial Services: https://arvanto.com/industries/financial-services
+- Healthcare & Life Sciences: https://arvanto.com/industries/healthcare
+- Technology & Telecom: https://arvanto.com/industries/technology
+- Energy & Infrastructure: https://arvanto.com/industries/energy-infrastructure
+- Consumer & Retail: https://arvanto.com/industries/consumer-retail
+- Public Sector & Development: https://arvanto.com/industries/public-sector
+- Legal & Professional Services: https://arvanto.com/industries/legal-professional-services
+
 ## Summary
 Arvanto partners with organizations to create resilient growth strategies, unlock operational value, and accelerate transformation through data, intelligence, and technology.
