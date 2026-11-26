@@ -167,7 +167,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-30 container mx-auto mb-8 mt-8 max-w-8xl px-5 2xl:px-0 md:absolute md:bottom-16 md:right-0 md:mb-0 md:mt-0 md:w-[62%] md:max-w-none">
+      <div className="relative z-30 container mx-auto mb-8 mt-8 max-w-8xl px-5 2xl:px-0 md:absolute md:bottom-11 md:right-0 md:mb-0 md:mt-0 md:w-[62%] md:max-w-none">
         <div className="rounded-2xl border border-white/10 bg-white p-5 shadow-2xl dark:bg-dark sm:p-7 md:rounded-l-3xl md:rounded-r-none md:py-8 md:px-10">
           <div className="grid grid-cols-2 items-stretch gap-4 sm:gap-6 md:flex md:flex-row md:gap-0 md:divide-x md:divide-black/10 md:dark:divide-white/10">
             <div className="flex flex-col items-start justify-center gap-1 md:flex-1 md:pr-8 lg:pr-10">
