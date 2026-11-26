@@ -26,11 +26,11 @@ const HERO_SLIDES = [
   },
   {
     image: "/images/home-hero-3.jpg",
-    eyebrow: "Insight & Intelligence",
-    headline: "See your business more clearly,",
-    highlight: "and shape what comes next.",
+    eyebrow: "STRATEGY · AI · TRANSFORMATION",
+    headline: "Strategy powered by intelligence.",
+    highlight: "Transformation built for results.",
     description:
-      "Connect customer, market, and operational insight to make better moves.",
+      "Arvanto combines board-level strategy, advanced analytics, and AI-enabled execution to help organisations navigate complexity and create lasting value.",
   },
   {
     image: "/images/home-hero-4.jpg",
