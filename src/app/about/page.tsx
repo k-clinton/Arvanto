@@ -5,7 +5,7 @@ import { PageHero } from "@/components/common/PageHero";
 
 export default function AboutPage() {
   return (
-    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-page-dark text-dark dark:text-white">
       <PageHero
         eyebrow="About Arvanto"
         title="Turning Complexity into Opportunity."
