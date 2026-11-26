@@ -69,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-page dark:bg-black text-dark dark:text-white antialiased transition-colors duration-300">
+      <body className="bg-page dark:bg-page-dark text-dark dark:text-white antialiased transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <Header />
           <RouteLoadingOverlay />
