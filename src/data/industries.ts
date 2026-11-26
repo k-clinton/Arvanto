@@ -176,6 +176,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Energy & Infrastructure",
     tagline: "Utilities, Renewable Energy, Logistics & Heavy Industry",
     description: "Balancing capital intensive assets with grid modernizations, operational efficiency, renewable energy transitions, and ESG risk compliance.",
+    listingContent: {
+      subheading: "Energy Transition, Asset Optimization & Infrastructure Advisory",
+      paragraphs: [
+        "Energy and infrastructure organizations manage highly capital-intensive asset bases while simultaneously navigating the energy transition, regulatory evolution, climate risk, and the need for greater operational reliability. Success requires sophisticated approaches to capital allocation, predictive maintenance, supply chain resilience, and the integration of renewable and conventional energy systems.",
+        "Arvanto supports utilities, independent power producers, renewable energy developers, logistics operators, and heavy industrial companies with strategic and operational advisory that improves asset performance, de-risks major investments, and accelerates the shift toward more sustainable operating models.",
+      ],
+      expertise: [
+        "Capital Asset Performance Optimization & Portfolio Strategy",
+        "Predictive Maintenance, Reliability Engineering & Operational Excellence",
+        "Renewable Energy Transition Strategy, Feasibility Analysis & Investment Structuring",
+        "Supply Chain, Logistics Optimization & Critical Infrastructure Resilience",
+      ],
+      closingParagraph:
+        "We combine deep technical and commercial understanding of energy systems with advanced analytics and transformation expertise to help clients make better capital and operational decisions in a rapidly changing sector.",
+    },
     image: "/images/page-hero-energy.jpg",
     heroImages: [
       "/images/page-hero-energy.jpg",
