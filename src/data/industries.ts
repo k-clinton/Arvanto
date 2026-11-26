@@ -74,6 +74,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Healthcare & Life Sciences",
     tagline: "Hospitals, Health Systems & Life Science Enterprises",
     description: "Optimizing patient flow, operational efficiency, medical supply chain resilience, and clinical data analytics infrastructure.",
+    listingContent: {
+      subheading: "Healthcare Strategy, Operations & Analytics Advisory",
+      paragraphs: [
+        "Healthcare providers and life sciences organizations operate in one of the most complex and tightly regulated environments in the economy. Rising demand, constrained resources, fragmented data systems, and the need for better clinical and operational outcomes require a sophisticated combination of strategy, process redesign, and advanced analytics.",
+        "Arvanto partners with hospitals, health systems, pharmaceutical and medical device companies, and healthcare payers to improve patient flow, optimize resource allocation, strengthen supply chain resilience, and build the clinical and operational data infrastructure required for evidence-based decision-making.",
+      ],
+      expertise: [
+        "Clinical Process Redesign & Care Pathway Optimization",
+        "Healthcare Resource Allocation, Capacity Planning & Workforce Optimization",
+        "Medical Supply Chain Resilience, Inventory Intelligence & Asset Tracking",
+        "Patient Outcome Analytics, Population Health Insights & Performance Measurement",
+      ],
+      closingParagraph:
+        "We combine operational excellence methodologies with data science and AI-enabled tools to help healthcare organizations deliver higher quality care more efficiently and sustainably.",
+    },
     image: "/images/page-hero-healthcare.jpg",
     heroImages: [
       "/images/page-hero-healthcare.jpg",
