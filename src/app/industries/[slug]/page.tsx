@@ -49,7 +49,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
 
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 py-12 sm:py-20">
         <section className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 lg:self-center">
             <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3">
               Industry perspective
             </p>
