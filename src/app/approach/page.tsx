@@ -5,7 +5,7 @@ import { PageHero } from "@/components/common/PageHero";
 
 export default function ApproachPage() {
   return (
-    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
       <PageHero
         eyebrow="Arvanto Methodology"
         title="Discover → Diagnose → Quantify → Transform → Scale"
