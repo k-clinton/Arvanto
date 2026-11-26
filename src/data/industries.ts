@@ -48,26 +48,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-strategy.jpg",
     ],
     industryPerspective: [
-      "Financial institutions are balancing growth and customer expectations with tighter oversight, changing risk conditions, and pressure to modernize legacy systems. These priorities are connected: a new digital product, for example, affects the operating model, data controls, and risk exposure as well as revenue.",
-      "Arvanto helps leadership teams bring those considerations together. We use strategy, quantitative analysis, and transformation planning to clarify where to invest, how to manage exposure, and how to turn priorities into an executable roadmap."
+      "Financial institutions today operate in one of the most demanding environments in the global economy. Rising regulatory expectations, intensifying competition from fintechs and embedded finance players, legacy technology constraints, and the need for sharper risk and capital management have created a new standard of performance. Boards and executive teams can no longer rely on incremental improvements. They require integrated strategy, advanced analytics, artificial intelligence, and disciplined transformation execution.",
+      "Arvanto partners with banks, insurance companies, capital markets institutions, and asset managers to address these challenges holistically. We combine deep financial services expertise with quantitative modelling, technology strategy, and large-scale change capabilities. Our work spans credit risk and pricing intelligence, core banking and platform modernization, actuarial and capital optimization, real-time fraud and financial crime detection, and the design of digital and embedded finance propositions that create sustainable competitive advantage.",
+      "We understand the unique pressures facing financial institutions across Africa, the Middle East, and international markets — balancing growth ambitions with capital discipline, regulatory compliance, and operational resilience."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Credit Risk & Pricing Intelligence",
+        title: "Credit Risk, Pricing & Portfolio Intelligence",
         description: "Use portfolio, customer, and market data to understand risk-adjusted returns, refine pricing decisions, and identify changes in credit quality earlier."
       },
       {
-        title: "Core Banking & FinTech Transformation",
+        title: "Core Banking & FinTech Platform Transformation",
         description: "Assess modernization options, sequence platform and process changes, and develop a practical transition plan that accounts for customers, controls, and operational continuity."
       },
       {
-        title: "Actuarial & Solvency II Modelling",
+        title: "Actuarial Modelling, Solvency & Capital Optimization",
         description: "Strengthen forecasting and capital planning with scenario analysis, actuarial models, and a clearer view of how assumptions affect resilience and strategic choices."
       },
       {
-        title: "Fraud Anomaly Detection Engines",
+        title: "Fraud Detection, Anomaly Engines & Financial Crime Prevention",
         description: "Improve how teams identify unusual activity by shaping data-led detection approaches, prioritizing investigation signals, and embedding insights into day-to-day operations."
       }
+    ],
+    closingPerspective: [
+      "Whether the priority is strengthening risk frameworks, modernising core systems, improving customer economics, or building AI-enabled decision engines, we deliver practical, board-ready solutions that move from insight to measurable impact."
     ]
   },
   {
