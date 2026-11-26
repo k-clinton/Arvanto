@@ -79,15 +79,24 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             </h2>
           </div>
           <ul className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
-            {industry.focusAreas.map((area) => (
+            {industry.focusAreas.map((area, index) => (
               <li
                 key={area.title}
                 className="flex items-start gap-3 border-t border-dark/10 dark:border-white/10 pt-5"
               >
-                <Icon
-                  icon="ph:check-circle-bold"
-                  className="text-primary w-5 h-5 mt-1 shrink-0"
-                />
+                {industry.numberedFocusAreas ? (
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 shrink-0 text-sm font-bold leading-none text-primary"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                ) : (
+                  <Icon
+                    icon="ph:check-circle-bold"
+                    className="text-primary w-5 h-5 mt-1 shrink-0"
+                  />
+                )}
                 <div>
                   <h3 className="text-base sm:text-lg font-bold mb-2">
                     {area.title}
@@ -100,6 +109,19 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             ))}
           </ul>
         </section>
+
+        {industry.closingPerspective && (
+          <div className="mt-10 max-w-5xl space-y-5">
+            {industry.closingPerspective.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-base sm:text-lg text-dark/70 dark:text-white/70 leading-relaxed"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
 
         <section className="mt-14 sm:mt-20 rounded-3xl bg-dark/5 dark:bg-white/5 px-6 py-10 sm:px-12 sm:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="max-w-2xl">
