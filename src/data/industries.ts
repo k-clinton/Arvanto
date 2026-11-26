@@ -8,6 +8,12 @@ export interface Industry {
   heroImages: string[];
   industryPerspective: string[];
   focusAreas: { title: string; description: string }[];
+  listingContent?: {
+    subheading: string;
+    paragraphs: string[];
+    expertise: string[];
+    closingParagraph: string;
+  };
 }
 
 export const INDUSTRIES: Industry[] = [
@@ -17,6 +23,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Financial Services",
     tagline: "Banking, Insurance, Capital Markets & Asset Management",
     description: "Navigating regulatory shifts, modernizing core banking platforms, deploying predictive credit risk models, and launching digital finance initiatives.",
+    listingContent: {
+      subheading: "Financial Services Consulting & Digital Transformation",
+      paragraphs: [
+        "Financial institutions face unprecedented pressure to modernize core systems, strengthen risk management frameworks, improve capital efficiency, combat financial crime, and deliver seamless digital customer experiences—all while operating under intensifying regulatory scrutiny. Arvanto supports banks, insurers, capital markets firms, and asset managers with end-to-end advisory and transformation services that address these challenges at both strategic and operational levels.",
+        "We help clients navigate regulatory change, redesign operating models, deploy advanced analytics and artificial intelligence, and accelerate digital and embedded finance initiatives across Africa, the Middle East, and international markets.",
+      ],
+      expertise: [
+        "Credit Risk Modelling, Pricing Intelligence & Portfolio Optimization",
+        "Core Banking Platform Modernization & FinTech Transformation",
+        "Actuarial Modelling, Solvency II / Risk-Based Capital & Capital Optimization",
+        "Real-Time Fraud Detection, Anomaly Detection Engines & Financial Crime Prevention",
+      ],
+      closingParagraph:
+        "Our work in Financial Services integrates quantitative risk analytics, technology strategy, regulatory compliance advisory, and large-scale change management to deliver measurable improvements in profitability, resilience, and customer outcomes.",
+    },
     image: "/images/page-hero-finance.jpg",
     heroImages: [
       "/images/page-hero-finance.jpg",

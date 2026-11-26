@@ -39,11 +39,11 @@ export default function IndustriesPage() {
           {INDUSTRIES.map((ind, index) => (
             <article
               key={ind.id}
-              className="grid gap-7 border-b border-dark/15 py-9 dark:border-white/15 sm:py-12 md:grid-cols-12 md:items-center md:gap-10 lg:gap-16"
+              className="grid gap-7 border-b border-dark/15 py-9 dark:border-white/15 sm:py-12 md:grid-cols-12 md:items-stretch md:gap-10 lg:gap-16"
             >
               <Link
                 href={`/industries/${ind.slug}`}
-                className={`group relative block h-56 cursor-pointer overflow-hidden sm:h-72 md:col-span-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+                className={`group relative block h-56 cursor-pointer overflow-hidden sm:h-72 md:col-span-5 md:h-full md:max-h-[32rem] md:min-h-72 md:self-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                   index % 2 === 1 ? "md:order-2" : ""
                 }`}
               >
@@ -85,23 +85,57 @@ export default function IndustriesPage() {
                 <h3 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
                   {ind.name}
                 </h3>
-                <p className="max-w-2xl text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
-                  {ind.description}
-                </p>
+                {ind.listingContent ? (
+                  <div className="max-w-2xl space-y-4 text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
+                    <h4 className="text-lg font-semibold leading-snug text-dark dark:text-white sm:text-xl">
+                      {ind.listingContent.subheading}
+                    </h4>
+                    {ind.listingContent.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
 
-                <div className="grid max-w-2xl grid-cols-1 gap-x-8 pt-2 sm:grid-cols-2">
-                  {ind.focusAreas.map((area, areaIndex) => (
-                    <p
-                      key={area.title}
-                      className="flex gap-3 border-t border-dark/10 py-2.5 text-sm text-dark/75 dark:border-white/10 dark:text-white/75"
-                    >
-                      <span className="text-xs font-semibold text-primary">
-                        {String(areaIndex + 1).padStart(2, "0")}
-                      </span>
-                      {area.title}
+                    <div>
+                      <h4 className="text-sm font-bold uppercase tracking-widest text-dark dark:text-white">
+                        Key Areas of Expertise
+                      </h4>
+                      <ol className="mt-3 list-none space-y-2">
+                        {ind.listingContent.expertise.map((area, areaIndex) => (
+                          <li
+                            key={area}
+                            className="flex gap-3 border-t border-dark/10 pt-2.5 text-sm text-dark/75 dark:border-white/10 dark:text-white/75"
+                          >
+                            <span className="text-xs font-semibold text-primary">
+                              {String(areaIndex + 1).padStart(2, "0")}
+                            </span>
+                            {area}
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+
+                    <p>{ind.listingContent.closingParagraph}</p>
+                  </div>
+                ) : (
+                  <>
+                    <p className="max-w-2xl text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
+                      {ind.description}
                     </p>
-                  ))}
-                </div>
+
+                    <div className="grid max-w-2xl grid-cols-1 gap-x-8 pt-2 sm:grid-cols-2">
+                      {ind.focusAreas.map((area, areaIndex) => (
+                        <p
+                          key={area.title}
+                          className="flex gap-3 border-t border-dark/10 py-2.5 text-sm text-dark/75 dark:border-white/10 dark:text-white/75"
+                        >
+                          <span className="text-xs font-semibold text-primary">
+                            {String(areaIndex + 1).padStart(2, "0")}
+                          </span>
+                          {area.title}
+                        </p>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </article>
           ))}
