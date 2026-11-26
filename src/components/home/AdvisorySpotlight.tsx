@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export function AdvisorySpotlight() {
   return (
-    <section className="py-16 sm:py-24 bg-page dark:bg-black">
+    <section className="py-16 sm:py-24 bg-page dark:bg-page-dark">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column Image Showcase */}
