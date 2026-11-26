@@ -1,99 +1,225 @@
-import Link from "next/link";
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-export function HeroSection() {
-  return (
-    <section className="relative w-full min-h-screen overflow-hidden !py-0 flex flex-col justify-between">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#5bb3e8] via-[#90cef4] to-[#dff0fb] dark:from-[#1a3a4f] dark:via-[#1e4d6b] dark:to-[#0d2233]" />
+const SLIDE_DURATION_MS = 6500;
 
-      {/* Hero Architectural Visual - Optimized for mobile & desktop */}
-      <div className="absolute top-[42%] sm:top-0 md:-top-12 right-0 w-[120%] sm:w-full md:w-[58%] lg:w-[62%] xl:w-[65%] h-[52%] sm:h-[65%] md:h-[92%] lg:h-full z-10 pointer-events-none flex items-start md:items-center justify-end">
-        <div className="relative w-full h-full">
+const HERO_SLIDES = [
+  {
+    image: "/images/home-hero-1.jpg",
+    eyebrow: "Strategy & Transformation",
+    headline: "From strategy to delivery,",
+    highlight: "turn ambition into measurable progress.",
+    description:
+      "Clear direction and practical execution for the outcomes that matter.",
+  },
+  {
+    image: "/images/home-hero-2.jpg",
+    eyebrow: "Partnership & Value Creation",
+    headline: "Build stronger relationships,",
+    highlight: "and turn good ideas into lasting results.",
+    description:
+      "Bring your teams and ambitions together around a shared path forward.",
+  },
+  {
+    image: "/images/home-hero-3.jpg",
+    eyebrow: "Insight & Intelligence",
+    headline: "See your business more clearly,",
+    highlight: "and shape what comes next.",
+    description:
+      "Connect customer, market, and operational insight to make better moves.",
+  },
+  {
+    image: "/images/home-hero-4.jpg",
+    eyebrow: "Growth & Transformation",
+    headline: "Make room for new growth,",
+    highlight: "with a business built for what’s next.",
+    description:
+      "Align people, platforms, and processes around your next opportunity.",
+  },
+] as const;
+
+export function HeroSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const activeSlide = HERO_SLIDES[activeIndex];
+
+  useEffect(() => {
+    const motionPreference = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+    const updateMotionPreference = () => {
+      setPrefersReducedMotion(motionPreference.matches);
+    };
+
+    updateMotionPreference();
+    motionPreference.addEventListener("change", updateMotionPreference);
+    return () =>
+      motionPreference.removeEventListener("change", updateMotionPreference);
+  }, []);
+
+  return (
+    <section className="relative isolate min-h-[100svh] overflow-hidden bg-page-dark text-white">
+      <div aria-hidden="true" className="absolute inset-0">
+        {HERO_SLIDES.map((slide, index) => (
           <Image
-            src="/images/heroBanner.png"
-            alt="Arvanto consultancy office – Arvanto"
+            key={slide.image}
+            src={slide.image}
+            alt=""
             fill
-            priority
-            sizes="(max-width: 640px) 120vw, (max-width: 768px) 100vw, (max-width: 1200px) 62vw, 65vw"
-            className="object-contain object-right-top md:object-right scale-100 sm:scale-105 md:scale-110 lg:scale-115 origin-right transition-transform duration-700"
+            priority={index === 0}
+            sizes="100vw"
+            className={`object-cover transition-opacity duration-1000 ease-in-out ${
+              index === activeIndex ? "opacity-100" : "opacity-0"
+            }`}
           />
-        </div>
+        ))}
+        <div className="absolute inset-y-0 left-0 w-full max-w-[42rem] bg-gradient-to-r from-page-dark/45 via-page-dark/15 to-transparent" />
       </div>
 
-      {/* Hero Content Container */}
-      <div className="relative z-20 container max-w-8xl mx-auto px-5 2xl:px-0 flex flex-col justify-center flex-1 pt-28 sm:pt-36 md:pt-20 pb-8 md:pb-52">
-        <div className="max-w-full sm:max-w-[75%] md:max-w-[48%]">
-
-          <p className="text-white/95 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-5 drop-shadow-sm">
-            Nairobi, Kenya • Global Hubs
+      <div className="container relative z-10 mx-auto flex min-h-[100svh] max-w-8xl flex-col px-5 pb-8 pt-32 sm:pb-10 sm:pt-40 md:pb-2 2xl:px-0">
+        <div
+          key={activeIndex}
+          aria-live="off"
+          className="hero-copy-enter my-auto max-w-xl py-10"
+        >
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/85 sm:mb-5 sm:text-sm">
+            {activeSlide.eyebrow}
           </p>
 
-          <h1 className="text-white font-bold leading-[1.08] tracking-tight mb-6 sm:mb-8 text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] drop-shadow-sm">
-            Strategy.<br />
-            Intelligence.<br />
-            Transformation.
+          <h1 className="max-w-[18ch] text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl">
+            {activeSlide.headline}{" "}
+            <span className="text-white/65">{activeSlide.highlight}</span>
           </h1>
 
-          <div className="flex flex-wrap gap-3">
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/80 sm:mt-6 sm:text-base md:text-lg">
+            {activeSlide.description}
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
             <Link
               href="/contactus"
-              className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-white text-dark text-xs sm:text-sm font-semibold rounded-full border border-white hover:bg-transparent hover:text-white hover:border-white transition-all duration-300 shadow-sm"
+              className="inline-flex items-center rounded-full border border-white bg-white px-6 py-3 text-xs font-semibold text-dark shadow-sm transition-all duration-300 hover:bg-transparent hover:text-white sm:px-7 sm:py-3.5 sm:text-sm"
             >
               Get in touch
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-transparent text-white text-xs sm:text-sm font-semibold rounded-full border border-white/60 hover:bg-white hover:text-dark hover:border-white transition-all duration-300"
+              className="inline-flex items-center rounded-full border border-white/60 bg-transparent px-6 py-3 text-xs font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-dark sm:px-7 sm:py-3.5 sm:text-sm"
             >
               Explore Capabilities
             </Link>
           </div>
         </div>
+
+        <div className="mt-auto w-full md:w-1/2">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <p className="shrink-0 text-xs font-semibold tracking-widest text-white">
+              <span>{String(activeIndex + 1).padStart(2, "0")}</span>
+              <span className="text-white/45">
+                {" "}
+                / {String(HERO_SLIDES.length).padStart(2, "0")}
+              </span>
+            </p>
+
+            <div
+              aria-hidden="true"
+              className="h-px flex-1 overflow-hidden bg-white/35"
+            >
+              <div
+                key={activeIndex}
+                className="hero-slide-progress h-full origin-left bg-white"
+                onAnimationEnd={() => {
+                  if (!isPaused && !prefersReducedMotion) {
+                    setActiveIndex(
+                      (index) => (index + 1) % HERO_SLIDES.length,
+                    );
+                  }
+                }}
+                style={{
+                  animationDuration: `${SLIDE_DURATION_MS}ms`,
+                  animationPlayState: isPaused ? "paused" : "running",
+                }}
+              />
+            </div>
+
+            {!prefersReducedMotion && (
+              <button
+                type="button"
+                onClick={() => setIsPaused((paused) => !paused)}
+                aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
+                aria-pressed={isPaused}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/35 text-white transition-colors hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                <Icon
+                  icon={isPaused ? "ph:play-fill" : "ph:pause-fill"}
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                />
+              </button>
+            )}
+          </div>
+
+        </div>
       </div>
 
-      {/* Stats Bar - Responsive 2x2 on Mobile, Floating Bar on Desktop */}
-      <div className="relative z-30 container max-w-8xl mx-auto px-5 2xl:px-0 mb-8 md:mb-0 md:absolute md:bottom-16 md:right-0 md:w-[62%] md:max-w-none">
-        <div className="bg-white dark:bg-dark rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-2xl border border-black/5 dark:border-white/5 p-5 sm:p-7 md:py-8 md:px-10">
-          <div className="grid grid-cols-2 md:flex md:flex-row items-stretch gap-4 sm:gap-6 md:gap-0 md:divide-x md:divide-black/8 md:dark:divide-white/10">
-
-            {/* Stat 1 */}
-            <div className="flex flex-col items-start sm:items-start justify-center gap-1 md:pr-8 lg:pr-10 md:flex-1">
-              <div className="bg-primary/10 dark:bg-primary/20 p-2 sm:p-2.5 rounded-full text-primary">
-                <Icon icon="ph:chart-line-up-bold" className="w-5 h-5 sm:w-6 sm:h-6" />
+      <div className="relative z-30 container mx-auto mb-8 mt-8 max-w-8xl px-5 2xl:px-0 md:absolute md:bottom-16 md:right-0 md:mb-0 md:mt-0 md:w-[62%] md:max-w-none">
+        <div className="rounded-2xl border border-white/10 bg-white p-5 shadow-2xl dark:bg-dark sm:p-7 md:rounded-l-3xl md:rounded-r-none md:py-8 md:px-10">
+          <div className="grid grid-cols-2 items-stretch gap-4 sm:gap-6 md:flex md:flex-row md:gap-0 md:divide-x md:divide-black/10 md:dark:divide-white/10">
+            <div className="flex flex-col items-start justify-center gap-1 md:flex-1 md:pr-8 lg:pr-10">
+              <div className="rounded-full bg-primary/10 p-2 text-primary dark:bg-primary/20 sm:p-2.5">
+                <Icon icon="ph:chart-line-up-bold" className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-dark dark:text-white mt-1">6 Core Practices</p>
-              <p className="text-[11px] sm:text-xs text-black/45 dark:text-white/45">Strategy to Scale</p>
+              <p className="mt-1 text-xs font-semibold text-dark dark:text-white sm:text-sm">
+                6 Core Practices
+              </p>
+              <p className="text-[11px] text-black/45 dark:text-white/45 sm:text-xs">
+                Strategy to Scale
+              </p>
             </div>
 
-            {/* Stat 2 */}
-            <div className="flex flex-col items-start sm:items-start justify-center gap-1 md:px-8 lg:px-10 md:flex-1">
-              <div className="bg-primary/10 dark:bg-primary/20 p-2 sm:p-2.5 rounded-full text-primary">
-                <Icon icon="ph:cpu-bold" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <div className="flex flex-col items-start justify-center gap-1 md:flex-1 md:px-8 lg:px-10">
+              <div className="rounded-full bg-primary/10 p-2 text-primary dark:bg-primary/20 sm:p-2.5">
+                <Icon icon="ph:cpu-bold" className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-dark dark:text-white mt-1">AI &amp; Quant Engines</p>
-              <p className="text-[11px] sm:text-xs text-black/45 dark:text-white/45">Decision Intelligence</p>
+              <p className="mt-1 text-xs font-semibold text-dark dark:text-white sm:text-sm">
+                AI &amp; Quant Engines
+              </p>
+              <p className="text-[11px] text-black/45 dark:text-white/45 sm:text-xs">
+                Decision Intelligence
+              </p>
             </div>
 
-            {/* Stat 3 */}
-            <div className="flex flex-col items-start sm:items-start justify-center gap-1 md:px-8 lg:px-10 md:flex-1">
-              <div className="bg-primary/10 dark:bg-primary/20 p-2 sm:p-2.5 rounded-full text-primary">
-                <Icon icon="ph:globe-hemisphere-east-bold" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <div className="flex flex-col items-start justify-center gap-1 md:flex-1 md:px-8 lg:px-10">
+              <div className="rounded-full bg-primary/10 p-2 text-primary dark:bg-primary/20 sm:p-2.5">
+                <Icon
+                  icon="ph:globe-hemisphere-east-bold"
+                  className="h-5 w-5 sm:h-6 sm:w-6"
+                />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-dark dark:text-white mt-1">Kenya &amp; Global</p>
-              <p className="text-[11px] sm:text-xs text-black/45 dark:text-white/45">Founded in Africa</p>
+              <p className="mt-1 text-xs font-semibold text-dark dark:text-white sm:text-sm">
+                Kenya &amp; Global
+              </p>
+              <p className="text-[11px] text-black/45 dark:text-white/45 sm:text-xs">
+                Founded in Africa
+              </p>
             </div>
 
-            {/* Stat 4 — ROI highlight */}
-            <div className="flex flex-col items-start sm:items-start justify-center gap-1 md:pl-8 lg:pl-10 md:flex-1">
-              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">$150M+</p>
-              <p className="text-[11px] sm:text-xs text-black/45 dark:text-white/45">ROI Created</p>
+            <div className="flex flex-col items-start justify-center gap-1 md:flex-1 md:pl-8 lg:pl-10">
+              <p className="text-xl font-bold text-primary sm:text-2xl md:text-3xl">
+                $150M+
+              </p>
+              <p className="text-[11px] text-black/45 dark:text-white/45 sm:text-xs">
+                ROI Created
+              </p>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 }
