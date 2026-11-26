@@ -104,26 +104,31 @@ export const INDUSTRIES: Industry[] = [
       "/images/page-hero-strategy.jpg",
     ],
     industryPerspective: [
-      "Healthcare providers and life sciences organizations must improve access, quality, and affordability while working within complex operating and regulatory environments. Demand patterns, workforce capacity, supply availability, and information systems all influence the ability to deliver reliable services.",
-      "We help teams understand where performance is constrained and identify changes that can be delivered responsibly. Our work connects operational analysis and data strategy with practical implementation, keeping patient outcomes, staff needs, and governance in view."
+      "Healthcare and life sciences organisations face a unique combination of clinical, operational, regulatory and financial complexity. Rising patient demand, constrained resources, fragmented information systems, supply chain vulnerabilities, and the growing expectation for evidence-based care require leaders to think differently about how care is designed, delivered and measured.",
+      "Arvanto works with hospitals, health systems, pharmaceutical and medical technology companies, and healthcare payers to strengthen both clinical and operational performance. We help clients redesign care pathways, optimise resource and capacity allocation, build resilient medical supply chains, and develop the data and analytics infrastructure required for better decision-making at every level of the organisation.",
+      "In emerging and high-growth markets, these challenges are often amplified by infrastructure constraints, workforce shortages, and the need to expand access while controlling costs. Arvanto brings experience working in these environments, helping healthcare leaders design solutions that are both ambitious and realistic."
     ],
+    numberedFocusAreas: true,
     focusAreas: [
       {
-        title: "Clinical Process Redesign",
+        title: "Clinical Process Redesign & Care Pathway Optimisation",
         description: "Map patient and staff workflows to identify delays, unnecessary handoffs, and opportunities to improve consistency without losing sight of clinical requirements."
       },
       {
-        title: "Healthcare Resource Allocation",
+        title: "Healthcare Resource Allocation & Capacity Planning",
         description: "Use demand and capacity analysis to support decisions about staffing, facilities, and equipment, helping leaders direct limited resources toward priority needs."
       },
       {
-        title: "Supply Chain & Asset Tracking",
+        title: "Medical Supply Chain Resilience & Asset Intelligence",
         description: "Review procurement, inventory, and distribution processes to improve visibility, anticipate supply constraints, and support more resilient operations."
       },
       {
-        title: "Patient Outcome Analytics",
+        title: "Patient Outcome Analytics & Population Health Insights",
         description: "Develop measurement approaches that help teams connect service activity with patient outcomes, identify meaningful patterns, and make evidence-informed improvements."
       }
+    ],
+    closingPerspective: [
+      "Whether the priority is operational turnaround, digital health strategy, supply chain resilience, or building analytics capability, we partner with clients to move from diagnosis to sustained execution."
     ]
   },
   {
