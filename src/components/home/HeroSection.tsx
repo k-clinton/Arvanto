@@ -34,9 +34,9 @@ const HERO_SLIDES = [
   },
   {
     image: "/images/home-hero-4.jpg",
-    eyebrow: "Growth & Transformation",
-    headline: "Make room for new growth,",
-    highlight: "with a business built for what’s next.",
+    eyebrow: "GLOBAL BUSINESS TRANSFORMATION",
+    headline: "Clearer strategy.Smarter decisions.",
+    highlight: "Stronger results.",
     description:
       "Align people, platforms, and processes around your next opportunity.",
   },
