@@ -69,7 +69,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           </div>
         </section>
 
-        <section className="mt-14 sm:mt-20 border-t border-dark/10 dark:border-white/10 pt-10 sm:pt-14">
+        <section className="mt-14 sm:mt-20 pt-10 sm:pt-14">
           <div className="max-w-3xl mb-8 sm:mb-10">
             <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3">
               Our focus
