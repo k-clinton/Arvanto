@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MainContent } from "@/components/layout/MainContent";
 import { RouteLoadingOverlay } from "@/components/layout/RouteLoadingOverlay";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 export const metadata: Metadata = {
@@ -74,6 +75,7 @@ export default function RootLayout({
           <RouteLoadingOverlay />
           <MainContent>{children}</MainContent>
           <Footer />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
