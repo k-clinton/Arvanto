@@ -55,6 +55,7 @@ export function TestimonialsSection() {
     <section
       className="bg-dark relative overflow-hidden py-24 group/section select-none"
       id="testimonial"
+      data-scroll-to-top-contrast=""
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
