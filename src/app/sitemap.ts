@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { INDUSTRIES } from "@/data/industries";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://arvanto.com";
@@ -13,5 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contactus`, lastModified: new Date() },
     { url: `${baseUrl}/terms-and-conditions`, lastModified: new Date() },
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date() },
+    ...INDUSTRIES.map(({ slug }) => ({
+      url: `${baseUrl}/industries/${slug}`,
+      lastModified: new Date(),
+    })),
   ];
 }
