@@ -47,7 +47,7 @@ export function VideoBanner() {
   }, [shouldLoadVideo]);
 
   return (
-    <section ref={sectionRef} className="py-12 bg-white dark:bg-black">
+    <section ref={sectionRef} className="py-12 bg-page dark:bg-black">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         <div className="relative overflow-hidden rounded-t-2xl bg-gradient-to-br from-dark via-[#123a52] to-skyblue">
           <video

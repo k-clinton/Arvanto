@@ -6,7 +6,7 @@ import { PageHero } from "@/components/common/PageHero";
 
 export default function ServicesPage() {
   return (
-    <div className="pb-16 bg-white dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
       <PageHero
         eyebrow="Arvanto Capabilities"
         title="6 Core Practices. End to End Execution."
