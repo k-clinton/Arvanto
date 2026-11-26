@@ -164,7 +164,7 @@ export default function IndustriesPage() {
       </section>
 
       <section className="container mx-auto max-w-8xl px-5 2xl:px-0">
-        <div className="pt-10 sm:pt-14">
+        <div className="pt-3 sm:pt-4">
           <div className="grid gap-3 sm:grid-cols-12 sm:gap-8">
             <div className="space-y-5 sm:col-span-9">
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
