@@ -125,6 +125,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Technology & Telecom",
     tagline: "SaaS Platforms, Telecom Networks & Digital Infrastructure",
     description: "Accelerating ARR expansion, optimizing subscriber retention, modernizing network operations, and structuring strategic technology partnerships.",
+    listingContent: {
+      subheading: "Technology Strategy, Growth & Platform Transformation",
+      paragraphs: [
+        "Technology companies and telecommunications operators must continuously balance rapid growth ambitions with the need for operational efficiency, customer retention, network reliability, and intelligent monetization. In highly competitive digital markets, the ability to predict customer behaviour, optimize pricing, scale platforms effectively, and modernize infrastructure has become a critical source of competitive advantage.",
+        "Arvanto works with SaaS businesses, telecom operators, and digital infrastructure providers to accelerate ARR growth, reduce churn, strengthen unit economics, and design the technology and commercial models required for sustainable scale.",
+      ],
+      expertise: [
+        "Customer Churn Prediction, Lifetime Value Modelling & Retention Strategy",
+        "Enterprise SaaS Pricing Architecture & Monetization Strategy",
+        "Network Operations Optimization & Infrastructure AI Applications",
+        "Digital Platform Scaling, Ecosystem Design & Partnership Strategy",
+      ],
+      closingParagraph:
+        "Our technology and telecom practice blends growth strategy, product and pricing expertise, advanced analytics, and large-scale transformation capabilities to help clients build more resilient and profitable digital businesses.",
+    },
     image: "/images/page-hero-technology.jpg",
     heroImages: [
       "/images/page-hero-technology.jpg",
