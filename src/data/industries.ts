@@ -344,7 +344,7 @@ export const INDUSTRIES: Industry[] = [
       closingParagraph:
         "Our professional services practice helps legal and advisory organizations build more efficient, client-centric, and future-ready operating models without compromising the quality and integrity of their work.",
     },
-    image: "/images/page-hero-strategy.jpg",
+    image: "/images/legal.jpeg",
     heroImages: [
       "/images/page-hero-strategy.jpg",
       "/images/page-hero-city.jpg",
