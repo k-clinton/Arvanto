@@ -39,7 +39,7 @@ export default function IndustriesPage() {
           {INDUSTRIES.map((ind, index) => (
             <article
               key={ind.id}
-              className="grid gap-7 border-b border-dark/15 py-9 dark:border-white/15 sm:py-12 md:grid-cols-12 md:items-stretch md:gap-10 lg:gap-16"
+              className="grid gap-7 py-9 sm:py-12 md:grid-cols-12 md:items-stretch md:gap-10 lg:gap-16"
             >
               <Link
                 href={`/industries/${ind.slug}`}
@@ -139,6 +139,32 @@ export default function IndustriesPage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-8xl px-5 2xl:px-0">
+        <div className="border-t border-dark/15 pt-10 dark:border-white/15 sm:pt-14">
+          <div className="max-w-4xl space-y-5">
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Sector Expertise. Strategic Clarity. Measurable Transformation.
+            </h2>
+            <p className="text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
+              Whether you are navigating regulatory change in Financial
+              Services, optimizing clinical and operational performance in
+              Healthcare, scaling a technology platform, managing
+              capital-intensive energy assets, strengthening retail economics,
+              transforming public institutions, or modernizing legal operations,
+              Arvanto brings the combination of industry depth, analytical
+              rigour, and execution capability required to deliver lasting
+              results.
+            </p>
+            <p className="text-sm leading-relaxed text-dark/70 dark:text-white/70 sm:text-base">
+              We do not offer generic frameworks. We deliver industry-informed
+              strategy, AI-enabled decision systems, and hands-on transformation
+              support tailored to the specific challenges and opportunities of
+              your sector.
+            </p>
+          </div>
         </div>
       </section>
     </div>
