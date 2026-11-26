@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-const SLIDE_DURATION_MS = 6500;
+const SLIDE_DURATION_MS = 4500;
 
 const HERO_SLIDES = [
   {
