@@ -278,6 +278,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Public Sector & Development",
     tagline: "Government Agencies, Development Financial Institutions & NGOs",
     description: "Enabling public policy execution, revenue collection optimization, infrastructure project evaluation, and national digital infrastructure transformation.",
+    listingContent: {
+      subheading: "Public Sector Transformation & Development Advisory",
+      paragraphs: [
+        "Public sector institutions and development organizations are under increasing pressure to deliver better services, strengthen revenue collection, evaluate and structure major infrastructure investments, and modernize national digital infrastructure—often under tight fiscal constraints and high public scrutiny. Effective solutions require rigorous economic analysis, practical implementation experience, and a deep understanding of institutional and political realities.",
+        "Arvanto supports government agencies, development finance institutions, and international organizations with advisory services focused on policy execution, revenue integrity, infrastructure appraisal, and large-scale public service transformation.",
+      ],
+      expertise: [
+        "Economic Impact Quantification, Policy Appraisal & Investment Analysis",
+        "Revenue Digitization, Tax Administration Strengthening & Integrity Systems",
+        "Infrastructure Project Appraisal, Structuring & Public-Private Partnership Advisory",
+        "Public Service Design, Operational Excellence & Digital Government Transformation",
+      ],
+      closingParagraph:
+        "We bring private-sector discipline, quantitative rigour, and implementation focus to complex public sector challenges, helping institutions deliver measurable improvements in service delivery, fiscal performance, and institutional capability.",
+    },
     image: "/images/page-hero-city.jpg",
     heroImages: [
       "/images/page-hero-city.jpg",
