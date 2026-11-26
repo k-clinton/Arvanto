@@ -10,11 +10,11 @@ const SLIDE_DURATION_MS = 4500;
 const HERO_SLIDES = [
   {
     image: "/images/home-hero-1.jpg",
-    eyebrow: "Strategy & Transformation",
-    headline: "From strategy to delivery,",
-    highlight: "turn ambition into measurable progress.",
+    eyebrow: "STRATEGY · INTELLIGENCE · TRANSFORMATION",
+    headline: "Turn complexity into clarity.",
+    highlight: "Turn strategy into measurable results",
     description:
-      "Clear direction and practical execution for the outcomes that matter.",
+      "Arvanto helps leadership teams combine strategy, data, and AI to make better decisions and deliver lasting performance improvement.",
   },
   {
     image: "/images/home-hero-2.jpg",
