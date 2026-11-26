@@ -5,7 +5,7 @@ import { INSIGHTS } from "@/data/insights";
 
 export function InsightsSection() {
   return (
-    <section className="py-16 sm:py-24 bg-page dark:bg-black">
+    <section className="py-16 sm:py-24 bg-page dark:bg-page-dark">
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
         {/* Header Row */}
         <div className="flex justify-between md:items-end items-start mb-8 sm:mb-10 md:flex-row flex-col gap-6">
