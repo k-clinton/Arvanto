@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 bg-dark">
+    <footer className="relative z-10 bg-dark" data-scroll-to-top-contrast="">
       <div className="container mx-auto max-w-8xl pt-14 px-4 sm:px-6 lg:px-0">
         {/* Newsletter / Subscription Bar */}
         <div className="flex lg:items-center justify-between items-start lg:items-end lg:gap-11 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
