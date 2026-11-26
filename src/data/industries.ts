@@ -329,6 +329,21 @@ export const INDUSTRIES: Industry[] = [
     name: "Legal & Professional Services",
     tagline: "Law Firms, Legal Departments & Advisory Practices",
     description: "Modernizing legal operations, knowledge management, client experience, and data-led service delivery for law firms and in-house teams.",
+    listingContent: {
+      subheading: "Legal Operations, Knowledge Management & Professional Services Transformation",
+      paragraphs: [
+        "Law firms and in-house legal departments are under growing pressure to improve efficiency, enhance client experience, leverage knowledge more effectively, and responsibly adopt artificial intelligence and automation—while maintaining the highest standards of quality, confidentiality, and professional ethics. Competitive advantage increasingly depends on operational excellence and intelligent use of data and technology rather than pure technical legal expertise alone.",
+        "Arvanto works with leading law firms, corporate legal departments, and professional service organizations to modernize legal operations, strengthen knowledge and matter management systems, improve client experience and business development, and design responsible AI and technology adoption strategies.",
+      ],
+      expertise: [
+        "Legal Process Transformation & Legal Operations Optimization",
+        "Knowledge Management, Matter Intelligence & Precedent Systems",
+        "Client Experience Design, Pricing Strategy & Growth Initiatives",
+        "Artificial Intelligence Adoption, Governance Frameworks & Technology Strategy for Legal Teams",
+      ],
+      closingParagraph:
+        "Our professional services practice helps legal and advisory organizations build more efficient, client-centric, and future-ready operating models without compromising the quality and integrity of their work.",
+    },
     image: "/images/page-hero-strategy.jpg",
     heroImages: [
       "/images/page-hero-strategy.jpg",
