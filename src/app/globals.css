@@ -133,6 +133,24 @@
   }
 }
 
+@keyframes hero-image-ken-burns-left {
+  from {
+    transform: scale(1.04) translate3d(1.2%, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.2%, -0.5%, 0);
+  }
+}
+
+@keyframes hero-image-ken-burns-right {
+  from {
+    transform: scale(1.04) translate3d(-1.2%, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(1.2%, -0.5%, 0);
+  }
+}
+
 @keyframes hero-copy-enter {
   from {
     opacity: 0;
@@ -142,6 +160,22 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.hero-image-pan-left {
+  transform: scale(1.1) translate3d(-1.2%, -0.5%, 0);
+}
+
+.hero-image-pan-right {
+  transform: scale(1.1) translate3d(1.2%, -0.5%, 0);
+}
+
+.hero-image-ken-burns-left {
+  animation: hero-image-ken-burns-left 4500ms linear forwards;
+}
+
+.hero-image-ken-burns-right {
+  animation: hero-image-ken-burns-right 4500ms linear forwards;
 }
 
 .hero-slide-progress {
@@ -159,6 +193,17 @@
   .service-copy,
   .service-image,
   .hero-copy-enter {
+    animation: none;
+  }
+
+  .hero-image-pan-left,
+  .hero-image-pan-right {
+    transform: none;
+    transition: none;
+  }
+
+  .hero-image-ken-burns-left,
+  .hero-image-ken-burns-right {
     animation: none;
   }
 
