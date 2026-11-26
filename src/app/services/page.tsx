@@ -66,7 +66,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className={`service-image md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative overflow-hidden ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
+            <div className={`service-image md:col-span-6 h-[240px] sm:h-[320px] md:h-[400px] relative overflow-hidden rounded-lg ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
               <Image
                 src={cap.image}
                 alt={cap.title}
