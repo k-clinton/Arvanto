@@ -41,14 +41,15 @@ export default function IndustriesPage() {
               key={ind.id}
               className="grid gap-7 border-b border-dark/15 py-9 dark:border-white/15 sm:py-12 md:grid-cols-12 md:items-center md:gap-10 lg:gap-16"
             >
-              <div
-                className={`group relative h-56 overflow-hidden sm:h-72 md:col-span-5 ${
+              <Link
+                href={`/industries/${ind.slug}`}
+                className={`group relative block h-56 cursor-pointer overflow-hidden sm:h-72 md:col-span-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                   index % 2 === 1 ? "md:order-2" : ""
                 }`}
               >
                 <Image
                   src={ind.image}
-                  alt={ind.name}
+                  alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 42vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -57,22 +58,30 @@ export default function IndustriesPage() {
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"
                 />
+                <span className="absolute left-4 top-4 z-10 text-xs font-bold uppercase tracking-widest text-primary sm:left-6 sm:top-6">
+                  {ind.tagline}
+                </span>
                 <span
                   aria-hidden="true"
                   className="absolute bottom-3 left-4 text-6xl font-bold leading-none tracking-tighter text-white/90 sm:bottom-5 sm:left-6 sm:text-8xl"
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
-              </div>
+                <span className="group/link absolute bottom-5 right-5 z-10 inline-flex items-center gap-2 bg-black/70 px-4 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-primary">
+                  Explore {ind.name}
+                  <Icon
+                    icon="ph:arrow-up-right-bold"
+                    aria-hidden="true"
+                    className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                  />
+                </span>
+              </Link>
 
               <div
                 className={`space-y-4 md:col-span-7 ${
                   index % 2 === 1 ? "md:order-1" : ""
                 }`}
               >
-                <p className="text-xs font-bold uppercase tracking-widest text-primary">
-                  {ind.tagline}
-                </p>
                 <h3 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
                   {ind.name}
                 </h3>
@@ -93,18 +102,6 @@ export default function IndustriesPage() {
                     </p>
                   ))}
                 </div>
-
-                <Link
-                  href={`/industries/${ind.slug}`}
-                  className="group/link inline-flex items-center gap-2 pt-1 text-sm font-bold transition-colors hover:text-primary"
-                >
-                  Explore {ind.name}
-                  <Icon
-                    icon="ph:arrow-up-right-bold"
-                    aria-hidden="true"
-                    className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
-                  />
-                </Link>
               </div>
             </article>
           ))}
