@@ -38,7 +38,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
   }
 
   return (
-    <div className="pb-16 bg-page dark:bg-black text-dark dark:text-white">
+    <div className="pb-16 bg-page dark:bg-page-dark text-dark dark:text-white">
       <PageHero
         backLink={{ href: "/industries", label: "All Industries" }}
         eyebrow={industry.tagline}
