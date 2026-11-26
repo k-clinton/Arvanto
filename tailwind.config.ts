@@ -13,7 +13,7 @@ const config: Config = {
         primary: "#07be8a",
         dark: "#0B0F17",
         page: "#e8effa",
-        "page-dark": "#243b61",
+        "page-dark": "#051b26",
         skyblue: "#0284c7",
         lightskyblue: "#0369a1",
       },
