@@ -5,16 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-const SLIDE_DURATION_MS = 4500;
+const SLIDE_DURATION_MS = 5300;
 
 const HERO_SLIDES = [
   {
     image: "/images/home-hero-1.jpg",
     eyebrow: "STRATEGY · INTELLIGENCE · TRANSFORMATION",
-    headline: "Turn complexity into clarity.",
-    highlight: "Turn strategy into measurable results",
+    headline: "A global business transformation",
+    highlight: "and value creation advisory.",
     description:
-      "Arvanto helps leadership teams combine strategy, data, and AI to make better decisions and deliver lasting performance improvement.",
+      "Arvanto is a global business transformation and value creation advisory that combines rigorous strategy, advanced data intelligence, and practical AI-enabled execution. We help organisations navigate complexity, make sharper decisions, and turn ambition into measurable, lasting results.",
   },
   {
     image: "/images/home-hero-2.jpg",
