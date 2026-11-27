@@ -190,7 +190,7 @@ export function HeroSection() {
                 <Icon icon="ph:chart-line-up-bold" className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <p className="mt-1 text-xs font-semibold text-dark dark:text-white sm:text-sm">
-                6 Core Practices
+                6 Intergrated Practices
               </p>
               <p className="text-[11px] text-black/45 dark:text-white/45 sm:text-xs">
                 Strategy to Scale
